@@ -134,13 +134,6 @@
               </a>
             </li>
         
-            <li class="">
-              <a href="/custom"  >
-                <i class="icon icon-lg icon-plus-square"></i>
-                CUSTOM
-              </a>
-            </li>
-        
       </ul>
     </div>
   </div>
@@ -197,6 +190,142 @@
 
     <div class="container body-wrap">
         <ul class="post-list">
+        
+            <li class="post-list-item fade">
+                <article id="post-artice-1"
+  class="article-card article-type-post" itemprop="blogPost">
+  
+    
+    
+    
+        
+
+
+  
+    <h3 class="post-title re-title" itemprop="name">
+      <a class="post-title-link" href="/2019/08/27/artice-1/">使用Uniapp遇见的坑 -- 1</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-meta">
+        <time class="post-time" title="2019-08-27 18:13:19" datetime="2019-08-27T10:13:19.847Z"  itemprop="datePublished">2019-08-27</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/webApp/">webApp</a></li></ul></li></ul>
+
+
+
+        
+
+        
+
+
+        
+        
+    </div>
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        
+在使用Uniapp开发webAPP的时候，总会遇见或多或小的坑
+
+问题某个元素使用 position: absolute 的时候，如果父级是page或者类似的元素，在手机端会出现定位不准确的问题
+解决方法（仅供参考）使用Uniapp特有的一个判断来实现
+可使用* #ifdef APP-PLUS * 来判定当前页面是否为手机端
+示例
+123/* #ifdef APP-PLUS */top: ...
+    
+    <a href="/2019/08/27/artice-1/" class="post-more waves-effect waves-button">
+        更多
+    </a>
+    </div>
+</article>
+
+<div class="post-footer">
+    
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Uniapp/">Uniapp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webApp/">webApp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+</div>
+
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-diary-1"
+  class="article-card article-type-post" itemprop="blogPost">
+  
+    
+        
+<div class="item-thumb">
+    <a class="thumb-link" href="/2019/08/27/diary-1/"></a>
+    <div class="thumb-hover">
+        <span class="icon icon-eye"></span>
+    </div>
+    <img src="//i.loli.net/2017/12/12/5a2fd18a74471.jpg" alt="图片路径不正确">
+    
+
+
+  
+    <h3 class="post-title ab-title" itemprop="name">
+      <a class="post-title-link" href="/2019/08/27/diary-1/">从这个博客站当我的新起点吧</a>
+    </h3>
+  
+
+
+
+</div>
+
+        
+    
+    
+    <div class="post-meta">
+        <time class="post-time" title="2019-08-27 17:26:34" datetime="2019-08-27T09:26:34.787Z"  itemprop="datePublished">2019-08-27</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/杂谈/">杂谈</a></li></ul>
+
+
+
+        
+
+        
+
+
+        
+        
+    </div>
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        
+忙活了许多时间，终于把博客给搭建起来了。从此刻开始记录我的所思、所得、所想
+
+目的不知不觉在前端开发这一行业已经工作了3年多，接触过大大小小的项目，也遇到许许多多的坑。以前总是想着记录自己的日常，可是总是懒懒散散，没有去记录。最近项目进行的比较多，遇到的坑啊啥的也越来越多，想要重新记录下来这些错误，警示自己，分享他人。
+2019希望实现的目标
+开始考驾照（被太多人鄙视了）
+
+
+开始接触后台...
+    
+    <a href="/2019/08/27/diary-1/" class="post-more waves-effect waves-button">
+        更多
+    </a>
+    </div>
+</article>
+
+<div class="post-footer">
+    
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+</div>
+
+
+            </li>
         
             <li class="post-list-item fade">
                 <article id="post-article2"
@@ -256,10 +385,6 @@
                 
                 GitHub set up
             
-格式: 
-                
-                Alt Text
-      ...
     
     <a href="/2019/08/27/article2/" class="post-more waves-effect waves-button">
         更多
@@ -277,7 +402,7 @@
             </li>
         
             <li class="post-list-item fade">
-                <article id="post-article"
+                <article id="post-article1"
   class="article-card article-type-post" itemprop="blogPost">
   
     
@@ -288,7 +413,7 @@
 
   
     <h3 class="post-title re-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/27/article/">测试测试</a>
+      <a class="post-title-link" href="/2019/08/27/article1/">测试测试</a>
     </h3>
   
 
@@ -332,14 +457,10 @@
 
 
                 
-                GitHub set up
+                测试图片
             
-格式: 
-                
-                Alt Text
-      ...
     
-    <a href="/2019/08/27/article/" class="post-more waves-effect waves-button">
+    <a href="/2019/08/27/article1/" class="post-more waves-effect waves-button">
         更多
     </a>
     </div>
@@ -350,55 +471,6 @@
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/uniapp/">uniapp</a></li></ul>
 
 </div>
-
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-hello-world"
-  class="article-card article-type-post" itemprop="blogPost">
-  
-    
-    
-    
-        
-
-
-  
-    <h3 class="post-title re-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/27/hello-world/">Hello World</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-27 11:53:38" datetime="2019-08-27T03:53:38.973Z"  itemprop="datePublished">2019-08-27</time>
-
-        
-
-
-        
-
-        
-
-
-        
-        
-    </div>
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-    
-    <a href="/2019/08/27/hello-world/" class="post-more waves-effect waves-button">
-        更多
-    </a>
-    </div>
-</article>
 
 
             </li>
@@ -416,7 +488,11 @@ Qu...
     <span>Links：</span>
     
     <span class="blogroll-item">
-        <a href="http://www.ruanyifeng.com/home.html" target="_blank">阮一峰的博客</a>
+        <a href="http://www.ruanyifeng.com/home.html" target="_blank">阮一峰</a>
+    </span>
+    
+    <span class="blogroll-item">
+        <a href="https://www.liaoxuefeng.com/" target="_blank">廖雪峰</a>
     </span>
     
 </p>
@@ -560,24 +636,6 @@ Qu...
 <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
-
-
-    <script>
-    (function() {
-        var OriginTitile = document.title, titleTime;
-        document.addEventListener('visibilitychange', function() {
-            if (document.hidden) {
-                document.title = '死鬼去哪里了！';
-                clearTimeout(titleTime);
-            } else {
-                document.title = '(つェ⊂)咦!又好了!';
-                titleTime = setTimeout(function() {
-                    document.title = OriginTitile;
-                },2000);
-            }
-        });
-    })();
-</script>
 
 
 

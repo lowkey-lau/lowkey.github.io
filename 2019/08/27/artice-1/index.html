@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     
     
-    <title>关于我 | 刘俊杭的个人博客 | 我相信只要敢去做没什么是攻克不了的</title>
+    <title>使用Uniapp遇见的坑 -- 1 | 刘俊杭的个人博客 | 我相信只要敢去做没什么是攻克不了的</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="帅气">
+    <meta name="keywords" content="Uniapp,前端,技术,webApp">
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="/css/style.css?v=1.4.4">
@@ -127,7 +127,7 @@
               </a>
             </li>
         
-            <li class=" active">
+            <li class="">
               <a href="/about"  >
                 <i class="icon icon-lg icon-user"></i>
                 关于我
@@ -146,7 +146,7 @@
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">
-            <span>关于我</span>
+            <span>使用Uniapp遇见的坑 -- 1</span>
             
         </div>
         
@@ -156,11 +156,19 @@
         
     </div>
 </header>
-<header class="content-header page-header">
+<header class="content-header post-header">
     <img src="/img/banner.jpg" class="header-bg">
     <div class="container fade-scale">
-        <h1 class="title">关于我</h1>
+        <h1 class="title">使用Uniapp遇见的坑 -- 1</h1>
         <h5 class="subtitle">
+            
+                <time datetime="2019-08-27T10:13:19.847Z" itemprop="datePublished" class="page-time">
+  2019-08-27
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/webApp/">webApp</a></li></ul></li></ul>
+
             
         </h5>
         
@@ -183,26 +191,77 @@
 </div>
 
 
-<div class="container body-wrap ">
-    <article class="page-article fade" itemprop="blogPage">
-        <div class="post-content page-content" id="page-content" itemprop="pageContent">
+<div class="container body-wrap">
+    <article id="post-artice-1"
+  class="post-article article-type-post" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">使用Uniapp遇见的坑 -- 1</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-08-27 18:13:19" datetime="2019-08-27T10:13:19.847Z"  itemprop="datePublished">2019-08-27</time>
+
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/webApp/">webApp</a></li></ul></li></ul>
+
+
+
+            
+
+            
+
+
             
         </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            
+            <blockquote>
+<p>在使用Uniapp开发webAPP的时候，总会遇见或多或小的坑</p>
+</blockquote>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>某个元素使用 <em>position: absolute</em> 的时候，如果父级是page或者类似的元素，在手机端会出现定位不准确的问题</p>
+<h2 id="解决方法（仅供参考）"><a href="#解决方法（仅供参考）" class="headerlink" title="解决方法（仅供参考）"></a>解决方法（仅供参考）</h2><p><strong>使用Uniapp特有的一个判断来实现</strong></p>
+<p>可使用* #ifdef APP-PLUS * 来判定当前页面是否为手机端</p>
+<p>示例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/* <span class="comment">#ifdef APP-PLUS */</span></span><br><span class="line">top: calc(【你的原始变量】 + var(--status-bar-height));</span><br><span class="line">/* <span class="comment">#endif */</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果文中有什么不足或者不准确的地方，请各位大佬提出来，一起进步，谢谢！</p>
+</blockquote>
+<!-- <figure class="image-box">
+                <a rel=使用Uniapp遇见的坑 -- 1 href="http://zh.mweb.im/asset/img/set-up-git.gif" title="测试图片" data-fancybox="images"><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="测试图片" title="" class=""></a>
+                <p>测试图片</p>
+            </figure> -->
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-08-27T10:30:23.865Z" itemprop="dateUpdated">2019-08-27 18:30:23</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2019/08/27/artice-1/" target="_blank" rel="external">https://lowkey-lau.github.io/2019/08/27/artice-1/</a>
+        
+    </div>
+    <footer>
+        <a href="https://lowkey-lau.github.io">
+            <img src="/img/avatar.jpg" alt="刘俊杭(Lowkey)">
+            刘俊杭(Lowkey)
+        </a>
+    </footer>
+</blockquote>
+
         
             <div class="page-reward">
     <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
 
+            
         
-        
-        <div class="card page-about-me flex-row">
-            <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/avatar.jpg"></a>
-            <div class="content flex-col">
-                <p><strong>刘俊杭(Lowkey)</strong></p>
-                <p><em>我相信只要敢去做没什么是攻克不了的</em></p>
-                <p></p>
-            </div>
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Uniapp/">Uniapp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webApp/">webApp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
             <div class="page-share-wrap">
     
 
@@ -210,7 +269,7 @@
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://lowkey-lau.github.io/about/&title=《关于我》 — 刘俊杭的个人博客&pic=https://lowkey-lau.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://lowkey-lau.github.io/2019/08/27/artice-1/&title=《使用Uniapp遇见的坑 -- 1》 — 刘俊杭的个人博客&pic=https://lowkey-lau.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -222,7 +281,7 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://lowkey-lau.github.io/about/&title=《关于我》 — 刘俊杭的个人博客&source=一个闷闷发育的前端开发" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://lowkey-lau.github.io/2019/08/27/artice-1/&title=《使用Uniapp遇见的坑 -- 1》 — 刘俊杭的个人博客&source=一个闷闷发育的前端开发" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -239,16 +298,39 @@
 
         </div>
         
-        
-        <div class="card">   
-           
+            
 
 
-        </div>
         
-    </article>
+    </div>
     
-        <div id="reward" class="page-modal reward-lay">
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="next">
+      <a href="/2019/08/27/diary-1/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">从这个博客站当我的新起点吧</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+    
+        <aside class="post-widget">
+            <nav class="post-toc-wrap" id="post-toc">
+                <strong>目录</strong>
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#问题"><span class="post-toc-number">1.</span> <span class="post-toc-text">问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决方法（仅供参考）"><span class="post-toc-number">2.</span> <span class="post-toc-text">解决方法（仅供参考）</span></a></li></ol>
+            </nav>
+            <div class="toc-bar"><div>
+        </aside>
+    
+</article>
+
+    <div id="reward" class="page-modal reward-lay">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
@@ -275,6 +357,7 @@
 </div>
 
     
+
 </div>
 
     </main>
@@ -341,7 +424,7 @@
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://lowkey-lau.github.io/about/&title=《关于我》 — 刘俊杭的个人博客&pic=https://lowkey-lau.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://lowkey-lau.github.io/2019/08/27/artice-1/&title=《使用Uniapp遇见的坑 -- 1》 — 刘俊杭的个人博客&pic=https://lowkey-lau.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -353,7 +436,7 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://lowkey-lau.github.io/about/&title=《关于我》 — 刘俊杭的个人博客&source=一个闷闷发育的前端开发" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://lowkey-lau.github.io/2019/08/27/artice-1/&title=《使用Uniapp遇见的坑 -- 1》 — 刘俊杭的个人博客&source=一个闷闷发育的前端开发" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -365,7 +448,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABv0lEQVR42u3aQQ6DMAxEUe5/6XRbCbmZsR1DpZ9VFWh4sLBix9cljxWM+9VoJlrtOjHgwoVb5q6f4/ue+29ltWiFaCZaAS5cuPPc6MHuK7ks3QAXLtz3c92QpKwPFy7cf+S6Wxx3Bi5cuG/j6tsXZV6vbxzM1eDChVvg5pbu/X2kvgsXLtwUd6WGHoaanwsXLtwRrht03AOS32mMW2qBCxfuJLfSQuEesuoNGZuACBcu3EGum33kCqC5q3Dhwp3hug+ol0eVUBW+PFy4cEe4ve0XOkV/GSPiwoULt4nbC+0tqWxKpXDhwn2ImzsscRMk4wgWLly4D3FzKYr7GrlQCBcu3BmuWzDt2vQoMxsPXLhwj3ErBxu5rYxeJA1LpXDhwj3Mracl9UKq8i+4cOFOcpUtiI7uauaQcjW4cOEe4ypHGl0NGXrTxmZluHDhHuYuc7gpUGUbZH8nuHDhNnHrDZd6KHTLoyU0XLhwy1wleLmhSk9p3BIqXLhwJ7lK42YF2lUugQsX7tu4OjR3Z6lPBC5cuA9xc0VVfebgFgcuXLgprhuM9GKKflUqocKFC3eE6z44F4D0GfejwIULt5X7AWiC02rZnUIWAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3a227CMBAFQP7/p9NXpBZz1puCbI+fUIHEk0rLXvx4xOt6Ws9/Gb/7e1XvcvPCwMBYlnENV3KD8XYTfHLfNw8FAwPjAMarzVXDa77d5EEke8PAwMBIPpOsaqKJgYGB0Q+4efGZp5tf+N3AwMBYipEUk+NO19zVvlCLY2BgLMjIu+6ff/0v8w0MDIylGFdxVa+TbysPsn/cBQMDY2tG9TYJbC4dTIrqN2UzBgbGpoxqC6xa1nZC7Rj2x/8BAwPjMMaHIn0w1IwOfGBgYBzJuGtgeW+b7+W7GBgYxzCSFC0PxPlnxo8peogYGBgHMPKksDPgrB6tSK6PgYFxAqPaUJsbcyabyFPJl1fDwMDYmlFN1PLW21w6ONeMw8DA2JWRp4N58peXu0lwL58WwcDA2I6RVILVVlonyHZGpBgYGLsyOiOB6jGLTmp4w2ELDAyMZRl5ETt3kCJpxnV+HzAwME5gzJWUnQMW9yaUGBgYJzD6zbV8hFkdkSZV6iP/EAYGxhaMuYHiOFDeNQaIvoWBgXEAI99Qnvx1WnhlPAYGxjGMuVFip8StNtrKRSwGBsbijKu4EvbcMHIu4EbdOwwMjMUZ/eNi/fFn8q3+MBUDA2N1RqdBlpe11WNkecsPAwPjHEarKV8sa6upZKEWx8DAwAh4eVCuJn9vwBgYGBi3tvXnCt2oiMXAwNia0Tnsld++39TDwMA4k9EPlHOBuFMGTw41MTAw1mP8ABgHqHYIqhbnAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 

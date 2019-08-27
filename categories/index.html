@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     
     
-    <title>分类页 | 刘俊杭的个人博客 | 我相信只要敢去做没什么是攻克不了的</title>
+    <title>分类 | 刘俊杭的个人博客 | 我相信只要敢去做没什么是攻克不了的</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content="帅气">
@@ -15,7 +15,7 @@
     <script type="text/javascript">
         // Data Center
         var DC = {
-            reward:	true,
+            reward:	false,
             lv: JSON.parse('{"enable":false,"app_id":null,"app_key":null,"icon":true}'),
             v: JSON.parse('{"enable":false,"appid":null,"appkey":null,"notify":true,"verify":true,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
             g: JSON.parse('{"enable":false,"lazy":true,"owner":"codefine","repo":"gitment","oauth":{"client_id":null,"client_secret":null},"perPage":10}'),
@@ -134,13 +134,6 @@
               </a>
             </li>
         
-            <li class="">
-              <a href="/custom"  >
-                <i class="icon icon-lg icon-plus-square"></i>
-                CUSTOM
-              </a>
-            </li>
-        
       </ul>
     </div>
   </div>
@@ -163,7 +156,7 @@
         
     </div>
 </header>
-<header class="content-header page-header">
+<header class="content-header categories-header">
     <img src="/img/banner.jpg" class="header-bg">
     <div class="container fade-scale">
         <h1 class="title">分类页</h1>
@@ -173,6 +166,30 @@
         
     </div>
     
+<div class="tabs-bar container">
+    <nav class="tags-list">
+        <a href="/categories" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
+             active">全部</a>
+        
+            <a href="/categories/web前端/" backup-style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">web前端</a>
+            
+        
+            <a href="/categories/杂谈/" backup-style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light">杂谈</a>
+            
+        
+            <a href="/categories/前端/" backup-style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">前端</a>
+            
+        
+            <a href="/categories/前端/webApp/" backup-style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">webApp</a>
+            
+        
+    </nav>
+    <!-- PC show more-->
+    <div class="tags-list-more">
+        <a href="javascript:;" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
+    </div>
+</div>
+
 
 </header>
 
@@ -189,98 +206,188 @@
     <div id="local-search-result"></div>
 </div>
 
-
-<div class="container body-wrap ">
-    <article class="page-article fade" itemprop="blogPage">
-        <div class="post-content page-content" id="page-content" itemprop="pageContent">
-            
-            
-        </div>
-        
-            <div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-        
-        
-        <div class="card page-about-me flex-row">
-            <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/avatar.jpg"></a>
-            <div class="content flex-col">
-                <p><strong>刘俊杭(Lowkey)</strong></p>
-                <p><em>我相信只要敢去做没什么是攻克不了的</em></p>
-                <p></p>
-            </div>
-            <div class="page-share-wrap">
+<div class="container body-wrap fade">
     
+                    <h3 class="archive-separator" id="tag-web前端">web前端</h3>
+                    <div class="waterfall">
+                        
+                            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2019-08-27 16:30:57" datetime="2019-08-27T08:30:57.337Z"  itemprop="datePublished">2019-08-27</time>
 
-<div class="page-share" id="pageShare">
-    <ul class="reset share-icons">
       
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://lowkey-lau.github.io/categories/&title=《分类页》 — 刘俊杭的个人博客&pic=https://lowkey-lau.github.io/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://lowkey-lau.github.io/categories/&title=《分类页》 — 刘俊杭的个人博客&source=一个闷闷发育的前端开发" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      
-    </ul>
- </div>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/web前端/">web前端</a></li></ul>
 
 
 
-    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
-        <i class="icon icon-share-alt icon-lg"></i>
-    </a>
-</div>
-
-        </div>
-        
-        
-        <div class="card">   
-           
-
-
-        </div>
-        
-    </article>
-    
-        <div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        我们一起来让这个世界有趣一点
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/img/reward-wechat.jpg" alt="打赏二维码">
-        </div>
-        
-        <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/reward-wechat.jpg" data-alipay="/img/reward-alipay.jpg">
-            <div class="reward-toggle-ctrol">
-                <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-label"></span>
-                <span class="reward-toggle-item alipay">支付宝</span>
-            </div>
-        </label>
-        
     </div>
-</div>
+    
 
+
+  
+    <h3 class="post-title " itemprop="name">
+      <a class="post-title-link" href="/2019/08/27/article2/">测试测试</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/uniapp/">uniapp</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+                        
+                            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2019-08-27 15:16:52" datetime="2019-08-27T07:16:52.473Z"  itemprop="datePublished">2019-08-27</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/web前端/">web前端</a></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title " itemprop="name">
+      <a class="post-title-link" href="/2019/08/27/article1/">测试测试</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/uniapp/">uniapp</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+                        
+                    </div>
+                
+                    <h3 class="archive-separator" id="tag-杂谈">杂谈</h3>
+                    <div class="waterfall">
+                        
+                            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2019-08-27 17:26:34" datetime="2019-08-27T09:26:34.787Z"  itemprop="datePublished">2019-08-27</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/杂谈/">杂谈</a></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title " itemprop="name">
+      <a class="post-title-link" href="/2019/08/27/diary-1/">从这个博客站当我的新起点吧</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+                        
+                    </div>
+                
+                    <h3 class="archive-separator" id="tag-前端">前端</h3>
+                    <div class="waterfall">
+                        
+                            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2019-08-27 18:13:19" datetime="2019-08-27T10:13:19.847Z"  itemprop="datePublished">2019-08-27</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/webApp/">webApp</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title " itemprop="name">
+      <a class="post-title-link" href="/2019/08/27/artice-1/">使用Uniapp遇见的坑 -- 1</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Uniapp/">Uniapp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webApp/">webApp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+                        
+                    </div>
+                
+                    <h3 class="archive-separator" id="tag-webApp">webApp</h3>
+                    <div class="waterfall">
+                        
+                            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2019-08-27 18:13:19" datetime="2019-08-27T10:13:19.847Z"  itemprop="datePublished">2019-08-27</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/webApp/">webApp</a></li></ul></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title " itemprop="name">
+      <a class="post-title-link" href="/2019/08/27/artice-1/">使用Uniapp遇见的坑 -- 1</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Uniapp/">Uniapp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webApp/">webApp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+                        
+                    </div>
+                
     
 </div>
 
@@ -293,7 +400,11 @@
     <span>Links：</span>
     
     <span class="blogroll-item">
-        <a href="http://www.ruanyifeng.com/home.html" target="_blank">阮一峰的博客</a>
+        <a href="http://www.ruanyifeng.com/home.html" target="_blank">阮一峰</a>
+    </span>
+    
+    <span class="blogroll-item">
+        <a href="https://www.liaoxuefeng.com/" target="_blank">廖雪峰</a>
     </span>
     
 </p>
@@ -344,7 +455,7 @@
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://lowkey-lau.github.io/categories/&title=《分类页》 — 刘俊杭的个人博客&pic=https://lowkey-lau.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://lowkey-lau.github.io/categories/&title=《分类》 — 刘俊杭的个人博客&pic=https://lowkey-lau.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -356,7 +467,7 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://lowkey-lau.github.io/categories/&title=《分类页》 — 刘俊杭的个人博客&source=一个闷闷发育的前端开发" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://lowkey-lau.github.io/categories/&title=《分类》 — 刘俊杭的个人博客&source=一个闷闷发育的前端开发" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -437,24 +548,6 @@
 <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
-
-
-    <script>
-    (function() {
-        var OriginTitile = document.title, titleTime;
-        document.addEventListener('visibilitychange', function() {
-            if (document.hidden) {
-                document.title = '死鬼去哪里了！';
-                clearTimeout(titleTime);
-            } else {
-                document.title = '(つェ⊂)咦!又好了!';
-                titleTime = setTimeout(function() {
-                    document.title = OriginTitile;
-                },2000);
-            }
-        });
-    })();
-</script>
 
 
 

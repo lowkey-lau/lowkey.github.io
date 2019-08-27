@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     
     
-    <title>关于我 | 刘俊杭的个人博客 | 我相信只要敢去做没什么是攻克不了的</title>
+    <title>标签页: 前端 | 刘俊杭的个人博客 | 我相信只要敢去做没什么是攻克不了的</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content="帅气">
@@ -15,7 +15,7 @@
     <script type="text/javascript">
         // Data Center
         var DC = {
-            reward:	true,
+            reward:	false,
             lv: JSON.parse('{"enable":false,"app_id":null,"app_key":null,"icon":true}'),
             v: JSON.parse('{"enable":false,"appid":null,"appkey":null,"notify":true,"verify":true,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
             g: JSON.parse('{"enable":false,"lazy":true,"owner":"codefine","repo":"gitment","oauth":{"client_id":null,"client_secret":null},"perPage":10}'),
@@ -113,7 +113,7 @@
               </a>
             </li>
         
-            <li class="">
+            <li class=" active">
               <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 标签页
@@ -127,7 +127,7 @@
               </a>
             </li>
         
-            <li class=" active">
+            <li class="">
               <a href="/about"  >
                 <i class="icon icon-lg icon-user"></i>
                 关于我
@@ -146,7 +146,7 @@
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">
-            <span>关于我</span>
+            <span>标签页: 前端</span>
             
         </div>
         
@@ -156,16 +156,49 @@
         
     </div>
 </header>
-<header class="content-header page-header">
+<header class="content-header tags-header">
     <img src="/img/banner.jpg" class="header-bg">
     <div class="container fade-scale">
-        <h1 class="title">关于我</h1>
+        <h1 class="title">标签页: 前端</h1>
         <h5 class="subtitle">
             
         </h5>
         
     </div>
     
+<div class="tabs-bar container">
+    <nav class="tags-list">
+        <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
+            ">全部</a>
+        
+            <a href="/tags/Markdown/" backup-style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">Markdown</a>
+            
+        
+            <a href="/tags/uniapp/" backup-style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">uniapp</a>
+            
+        
+            <a href="/tags/日记/" backup-style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">日记</a>
+            
+        
+            <a href="/tags/Uniapp/" backup-style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">Uniapp</a>
+            
+        
+            <a href="/tags/前端/" backup-style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light active">前端</a>
+            
+        
+            <a href="/tags/技术/" backup-style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">技术</a>
+            
+        
+            <a href="/tags/webApp/" backup-style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">webApp</a>
+            
+        
+    </nav>
+    <!-- PC show more-->
+    <div class="tags-list-more">
+        <a href="javascript:;" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
+    </div>
+</div>
+
 
 </header>
 
@@ -182,100 +215,47 @@
     <div id="local-search-result"></div>
 </div>
 
-
-<div class="container body-wrap ">
-    <article class="page-article fade" itemprop="blogPage">
-        <div class="post-content page-content" id="page-content" itemprop="pageContent">
-            
-            
-        </div>
-        
-            <div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-        
-        
-        <div class="card page-about-me flex-row">
-            <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/avatar.jpg"></a>
-            <div class="content flex-col">
-                <p><strong>刘俊杭(Lowkey)</strong></p>
-                <p><em>我相信只要敢去做没什么是攻克不了的</em></p>
-                <p></p>
-            </div>
-            <div class="page-share-wrap">
+<div class="container body-wrap fade">
     
+            <div class="waterfall">
+                
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2019-08-27 18:13:19" datetime="2019-08-27T10:13:19.847Z"  itemprop="datePublished">2019-08-27</time>
 
-<div class="page-share" id="pageShare">
-    <ul class="reset share-icons">
       
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://lowkey-lau.github.io/about/&title=《关于我》 — 刘俊杭的个人博客&pic=https://lowkey-lau.github.io/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://lowkey-lau.github.io/about/&title=《关于我》 — 刘俊杭的个人博客&source=一个闷闷发育的前端开发" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      
-    </ul>
- </div>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/webApp/">webApp</a></li></ul></li></ul>
 
 
 
-    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
-        <i class="icon icon-share-alt icon-lg"></i>
-    </a>
-</div>
-
-        </div>
-        
-        
-        <div class="card">   
-           
-
-
-        </div>
-        
-    </article>
-    
-        <div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        我们一起来让这个世界有趣一点
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/img/reward-wechat.jpg" alt="打赏二维码">
-        </div>
-        
-        <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/reward-wechat.jpg" data-alipay="/img/reward-alipay.jpg">
-            <div class="reward-toggle-ctrol">
-                <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-label"></span>
-                <span class="reward-toggle-item alipay">支付宝</span>
-            </div>
-        </label>
-        
     </div>
-</div>
+    
+
+
+  
+    <h3 class="post-title " itemprop="name">
+      <a class="post-title-link" href="/2019/08/27/artice-1/">使用Uniapp遇见的坑 -- 1</a>
+    </h3>
+  
+
+
 
     
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Uniapp/">Uniapp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webApp/">webApp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </div>
+    
+  </article>
 </div>
+        
+            </div>
+        
+    
+</div>
+
 
     </main>
     <footer class="footer ">
@@ -341,7 +321,7 @@
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://lowkey-lau.github.io/about/&title=《关于我》 — 刘俊杭的个人博客&pic=https://lowkey-lau.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://lowkey-lau.github.io/tags/前端/&title=刘俊杭的个人博客&pic=https://lowkey-lau.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -353,7 +333,7 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://lowkey-lau.github.io/about/&title=《关于我》 — 刘俊杭的个人博客&source=一个闷闷发育的前端开发" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://lowkey-lau.github.io/tags/前端/&title=刘俊杭的个人博客&source=一个闷闷发育的前端开发" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -365,7 +345,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABv0lEQVR42u3aQQ6DMAxEUe5/6XRbCbmZsR1DpZ9VFWh4sLBix9cljxWM+9VoJlrtOjHgwoVb5q6f4/ue+29ltWiFaCZaAS5cuPPc6MHuK7ks3QAXLtz3c92QpKwPFy7cf+S6Wxx3Bi5cuG/j6tsXZV6vbxzM1eDChVvg5pbu/X2kvgsXLtwUd6WGHoaanwsXLtwRrht03AOS32mMW2qBCxfuJLfSQuEesuoNGZuACBcu3EGum33kCqC5q3Dhwp3hug+ol0eVUBW+PFy4cEe4ve0XOkV/GSPiwoULt4nbC+0tqWxKpXDhwn2ImzsscRMk4wgWLly4D3FzKYr7GrlQCBcu3BmuWzDt2vQoMxsPXLhwj3ErBxu5rYxeJA1LpXDhwj3Mracl9UKq8i+4cOFOcpUtiI7uauaQcjW4cOEe4ypHGl0NGXrTxmZluHDhHuYuc7gpUGUbZH8nuHDhNnHrDZd6KHTLoyU0XLhwy1wleLmhSk9p3BIqXLhwJ7lK42YF2lUugQsX7tu4OjR3Z6lPBC5cuA9xc0VVfebgFgcuXLgprhuM9GKKflUqocKFC3eE6z44F4D0GfejwIULt5X7AWiC02rZnUIWAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxElEQVR42u3aS27DMAwFwNz/0inQXRHYfRT1cYDRyogjeewFQVF8veLx/h2f1/d3P/95NWvywMXFbXPft+MKkcy6ekp1TVxc3FPcJHgloPu5eXC8/B0XF/dh3DxBuQpb1WQIFxf3+dwrdILL0x1cXNzncJPNT4JOft+0V8PFxW1wOwXTWdeb6ru4uLjtU4m5QW2s8PpnNVxc3C3caskjh1ZXyLdDuLi4O7ljxE7JI89kcHFx93P7oSo/VhkLYVFQw8XFncSddVCav16r1QMXF3cLN0lx7oPLrBcoFFlwcXEXc+/Ti7ypYqwIUt7w4OLiHuImB6tjyVB1i4WLi3uK2z8gSYJggi6UXHFxcRdzkxQnT2WqQbD8IXBxcY9yk/ap/G5SEIk+By4u7hbu2ELV1opqoPxnE4WLi7uY2z8crbZSVdsvcHFxT3HzAFRNiV7tgYuLe4qbj7FjlX74K/Ru4OLitrnVgFItlOTFjrGSKy4u7jruWPDqlE2n9Yzg4uIu5o5tfpJGikLTVd6YhYuL+xju2AOS9qzCLFxc3C/hdl6gvHHCxcXdyO00YCVpTac9dLAsgouLu7Fg2i+pTAhnuLi4q7g/PR12nUtNj2sAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 

@@ -8,6 +8,8 @@
       <content type="html"><![CDATA[<blockquote>
 <p>因为现在开始要记录博客了，而写博客的手法使用Markdown的写法，想要在这里记录一下收集到的写法，给自己作参考使用</p>
 </blockquote>
+<a id="more"></a>
+
 <h1 id="一、关于标题层级"><a href="#一、关于标题层级" class="headerlink" title="一、关于标题层级"></a>一、关于标题层级</h1><p>标题共有六个级别,使用 ( <strong>#</strong> )来区分层级</p>
 <blockquote>
 <h1 id="这是一级标题-（-这是一级标题）"><a href="#这是一级标题-（-这是一级标题）" class="headerlink" title="这是一级标题 （# 这是一级标题）"></a>这是一级标题 （# 这是一级标题）</h1><h2 id="这是二级标题-（-这是二级标题）"><a href="#这是二级标题-（-这是二级标题）" class="headerlink" title="这是二级标题 （## 这是二级标题）"></a>这是二级标题 （## 这是二级标题）</h2><h3 id="这是三级标题-（-这是三级标题）"><a href="#这是三级标题-（-这是三级标题）" class="headerlink" title="这是三级标题 （### 这是三级标题）"></a>这是三级标题 （### 这是三级标题）</h3><h4 id="这是四级标题-（-这是四级标题）"><a href="#这是四级标题-（-这是四级标题）" class="headerlink" title="这是四级标题 （#### 这是四级标题）"></a>这是四级标题 （#### 这是四级标题）</h4><h5 id="这是五级标题-（-这是五级标题）"><a href="#这是五级标题-（-这是五级标题）" class="headerlink" title="这是五级标题 （##### 这是五级标题）"></a>这是五级标题 （##### 这是五级标题）</h5><h6 id="这是六级标题-（-这是六级标题）"><a href="#这是六级标题-（-这是六级标题）" class="headerlink" title="这是六级标题 （###### 这是六级标题）"></a>这是六级标题 （###### 这是六级标题）</h6></blockquote>
@@ -40,6 +42,7 @@
 <p>在使用Uniapp开发webAPP的时候，总会遇见或多或小的坑</p>
 </blockquote>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>某个元素使用 <em>position: absolute</em> 的时候，如果父级是page或者类似的元素，在手机端会出现定位不准确的问题</p>
+<a id="more"></a>
 <h2 id="解决方法（仅供参考）"><a href="#解决方法（仅供参考）" class="headerlink" title="解决方法（仅供参考）"></a>解决方法（仅供参考）</h2><p><strong>使用Uniapp特有的一个判断来实现</strong></p>
 <p>可使用* #ifdef APP-PLUS * 来判定当前页面是否为手机端</p>
 <p>示例</p>
@@ -79,6 +82,8 @@
       <content type="html"><![CDATA[<blockquote>
 <p>忙活了许多时间，终于把博客给搭建起来了。从此刻开始记录我的所思、所得、所想</p>
 </blockquote>
+<a id="more"></a>
+
 <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>不知不觉在前端开发这一行业已经工作了3年多，接触过大大小小的项目，也遇到许许多多的坑。<br>以前总是想着记录自己的日常，可是总是懒懒散散，没有去记录。<br>最近项目进行的比较多，遇到的坑啊啥的也越来越多，想要重新记录下来这些错误，警示自己，分享他人。</p>
 <h2 id="2019希望实现的目标"><a href="#2019希望实现的目标" class="headerlink" title="2019希望实现的目标"></a>2019希望实现的目标</h2><ul>
 <li>开始考驾照（被太多人鄙视了）</li>
@@ -116,6 +121,8 @@
       <title><![CDATA[测试测试]]></title>
       <url>/2019/08/27/article2/</url>
       <content type="html"><![CDATA[<p>测试使用这个新的主题</p>
+<a id="more"></a>
+
 <h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><blockquote>
 <p>区块引用</p>
 <blockquote>
@@ -154,6 +161,8 @@
       <title><![CDATA[测试测试]]></title>
       <url>/2019/08/27/article1/</url>
       <content type="html"><![CDATA[<p>测试使用这个新的主题</p>
+<a id="more"></a>
+
 <h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><blockquote>
 <p>区块引用</p>
 <blockquote>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lowkey-lau.github.io/"/>
-  <updated>2019-08-28T04:16:16.635Z</updated>
+  <updated>2019-08-29T03:37:13.526Z</updated>
   <id>https://lowkey-lau.github.io/</id>
   
   <author>
@@ -20,15 +20,15 @@
     <title>Markdown 写法记录</title>
     <link href="https://lowkey-lau.github.io/2019/08/28/diary-2/"/>
     <id>https://lowkey-lau.github.io/2019/08/28/diary-2/</id>
-    <published>2019-08-28T02:10:07.000Z</published>
-    <updated>2019-08-28T04:16:16.635Z</updated>
+    <published>2019-08-28T02:10:07.774Z</published>
+    <updated>2019-08-29T03:37:13.526Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>因为现在开始要记录博客了，而写博客的手法使用Markdown的写法，想要在这里记录一下收集到的写法，给自己作参考使用</p></blockquote><a id="more"></a><h1 id="一、关于标题层级"><a href="#一、关于标题层级" class="headerlink" title="一、关于标题层级"></a>一、关于标题层级</h1><p>标题共有六个级别,使用 ( <strong>#</strong> )来区分层级</p><blockquote><h1 id="这是一级标题-（-这是一级标题）"><a href="#这是一级标题-（-这是一级标题）" class="headerlink" title="这是一级标题 （# 这是一级标题）"></a>这是一级标题 （# 这是一级标题）</h1><h2 id="这是二级标题-（-这是二级标题）"><a href="#这是二级标题-（-这是二级标题）" class="headerlink" title="这是二级标题 （## 这是二级标题）"></a>这是二级标题 （## 这是二级标题）</h2><h3 id="这是三级标题-（-这是三级标题）"><a href="#这是三级标题-（-这是三级标题）" class="headerlink" title="这是三级标题 （### 这是三级标题）"></a>这是三级标题 （### 这是三级标题）</h3><h4 id="这是四级标题-（-这是四级标题）"><a href="#这是四级标题-（-这是四级标题）" class="headerlink" title="这是四级标题 （#### 这是四级标题）"></a>这是四级标题 （#### 这是四级标题）</h4><h5 id="这是五级标题-（-这是五级标题）"><a href="#这是五级标题-（-这是五级标题）" class="headerlink" title="这是五级标题 （##### 这是五级标题）"></a>这是五级标题 （##### 这是五级标题）</h5><h6 id="这是六级标题-（-这是六级标题）"><a href="#这是六级标题-（-这是六级标题）" class="headerlink" title="这是六级标题 （###### 这是六级标题）"></a>这是六级标题 （###### 这是六级标题）</h6></blockquote><h1 id="二、关于字体设置"><a href="#二、关于字体设置" class="headerlink" title="二、关于字体设置"></a>二、关于字体设置</h1><blockquote><p><em>我是斜体</em><br><strong>我是粗体</strong><br><strong><em>我是斜体加粗体</em></strong><br><del>我是删除字符串</del></p></blockquote><figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line">dasdas</span><br><span class="line"><span class="comment">// asdasd</span></span><br><span class="line">adasd</span><br></pre></td></tr></table></figure><!-- ![测试图片](http://zh.mweb.im/asset/img/set-up-git.gif) -->]]></content>
+    <content type="html"><![CDATA[<blockquote><p>因为现在开始记录博客了，而写博客使用Markdown的写法，所以想要在这里记录一下Markdown的写法，以作参考使用</p></blockquote><a id="more"></a><hr><h2 id="Markdown-的创始人"><a href="#Markdown-的创始人" class="headerlink" title="Markdown 的创始人"></a>Markdown 的创始人</h2><p><img src="https://upload-images.jianshu.io/upload_images/1293430-67a409e21507d498.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/401/format/webp" alt="Aaron Swartz 大神照片&#39;"><span class="image-caption">Aaron Swartz 大神照片&#39;</span></p><blockquote><p>Aaron Swartz 大神照片</p></blockquote><hr><h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h2><p>标题共有六个级别,使用 <code>#</code> 来区分层级</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 一级标题</span></span><br><span class="line"><span class="comment">## 二级标题</span></span><br><span class="line"><span class="comment">### 三级标题</span></span><br><span class="line"><span class="comment">#### 四级标题</span></span><br><span class="line"><span class="comment">##### 五级标题</span></span><br><span class="line"><span class="comment">###### 六级标题</span></span><br></pre></td></tr></table></figure><p><em>注：# 和字符之间建议保留一个字符的空格，这是最标准的 Markdown 写法。</em></p><hr><h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2. 字体"></a>2. 字体</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">斜体设置： *我是斜体* </span><br><span class="line">粗体设置： **我是粗体**</span><br><span class="line">斜体加粗体设置： ***我是斜体加粗体***</span><br><span class="line">删除字符串设置： ~我是删除字符串~</span><br></pre></td></tr></table></figure><p>显示效果为:</p><blockquote><p><em>我是斜体</em><br><strong>我是粗体</strong><br><strong><em>我是斜体加粗体</em></strong><br><del>我是删除字符串</del></p></blockquote><hr><h2 id="3-代码块"><a href="#3-代码块" class="headerlink" title="3. 代码块"></a>3. 代码块</h2><h3 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h3><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">`这是单行代码`</span><br></pre></td></tr></table></figure><p>显示效果为:<br><code>这是单行代码</code></p><h3 id="多行代码"><a href="#多行代码" class="headerlink" title="多行代码"></a>多行代码</h3><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line">这是代码块</span><br><span class="line">```</span><br></pre></td></tr></table></figure><p>显示效果为:</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">这是代码块</span><br></pre></td></tr></table></figure><hr><h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4. 引用"></a>4. 引用</h2><p>可以无限制的引用下去</p><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">&gt; 我是第一级引用</span><br><span class="line"><span class="meta">&gt;&gt;</span> 我是第二级引用</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; 我是第三级引用</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt;&gt; ...</span><br></pre></td></tr></table></figure><p>显示效果为:</p><blockquote><p>我是第一级引用</p><blockquote><p>我是第二级引用</p><blockquote><p>我是第三级引用</p><blockquote><p>…</p></blockquote></blockquote></blockquote></blockquote><hr><h2 id="5-列表"><a href="#5-列表" class="headerlink" title="5. 列表"></a>5. 列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>使用 <code>-</code> 、 <code>+</code> 、 <code>*</code> 书写<br>效果：</p><ul><li>1</li><li>2</li><li>3</li></ul><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>使用 <code>1.</code> 、 <code>2.</code> 、 <code>3.</code> 书写</p><p>效果：</p><ol><li>1</li><li>2</li><li>7 (会按照序列强制编排,例如我这一行使用的是 <code>7.</code> )</li></ol><hr><h2 id="6-链接"><a href="#6-链接" class="headerlink" title="6. 链接"></a>6. 链接</h2><blockquote><p>插入超链接不需要其他按钮，你只需要使用 <strong>[显示文本](链接地址)</strong> 这样的语法即可</p></blockquote><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">我是链接，点我</span>](<span class="link">https://lowkey-lau.github.io/</span>)</span><br></pre></td></tr></table></figure><p>效果显示为：<br><a href="https://lowkey-lau.github.io/">我是链接，点我</a></p><blockquote><p>插入图片不需要其他按钮，你只需要使用 <strong>![](图片链接地址)</strong> 这样的语法即可</p></blockquote><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">我是图片备注</span>](<span class="link">http://zh.mweb.im/asset/img/set-up-git.gif</span>)</span><br></pre></td></tr></table></figure><p>效果显示为：<br><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="我是图片备注"><span class="image-caption">我是图片备注</span></p><p>显示效果为: </p>]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;因为现在开始要记录博客了，而写博客的手法使用Markdown的写法，想要在这里记录一下收集到的写法，给自己作参考使用&lt;/p&gt;
+&lt;p&gt;因为现在开始记录博客了，而写博客使用Markdown的写法，所以想要在这里记录一下Markdown的写法，以作参考使用&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -78,7 +78,7 @@
     <link href="https://lowkey-lau.github.io/2019/08/27/diary-1/"/>
     <id>https://lowkey-lau.github.io/2019/08/27/diary-1/</id>
     <published>2019-08-27T09:26:34.787Z</published>
-    <updated>2019-08-28T04:16:20.124Z</updated>
+    <updated>2019-08-28T10:31:40.828Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>忙活了许多时间，终于把博客给搭建起来了。从此刻开始记录我的所思、所得、所想</p></blockquote><a id="more"></a><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>不知不觉在前端开发这一行业已经工作了3年多，接触过大大小小的项目，也遇到许许多多的坑。<br>以前总是想着记录自己的日常，可是总是懒懒散散，没有去记录。<br>最近项目进行的比较多，遇到的坑啊啥的也越来越多，想要重新记录下来这些错误，警示自己，分享他人。</p><h2 id="2019希望实现的目标"><a href="#2019希望实现的目标" class="headerlink" title="2019希望实现的目标"></a>2019希望实现的目标</h2><ul><li>开始考驾照（被太多人鄙视了）</li></ul><ul><li>开始接触后台的相关知识，尝试搭建一个小型的个人全栈</li></ul><ul><li>找到一个能发挥自己实力的工作，争取上流</li></ul><ul><li>能带我心爱的人出国旅游</li></ul><ul><li>带女朋友回家哈哈哈哈哈</li></ul><!-- ![测试图片](http://zh.mweb.im/asset/img/set-up-git.gif) -->]]></content>
     
@@ -102,7 +102,7 @@
     <link href="https://lowkey-lau.github.io/2019/08/27/article2/"/>
     <id>https://lowkey-lau.github.io/2019/08/27/article2/</id>
     <published>2019-08-27T08:30:57.337Z</published>
-    <updated>2019-08-28T04:16:25.011Z</updated>
+    <updated>2019-08-29T02:44:36.850Z</updated>
     
     <content type="html"><![CDATA[<p>测试使用这个新的主题</p><a id="more"></a><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><blockquote><p>区块引用</p><blockquote><p>嵌套引用</p><blockquote><p>三嵌套引用</p><blockquote><p>四嵌套引用</p></blockquote></blockquote></blockquote></blockquote><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">代码块</span><br></pre></td></tr></table></figure><p><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="GitHub set up"></p>]]></content>
     
@@ -117,7 +117,7 @@
     
       <category term="Markdown" scheme="https://lowkey-lau.github.io/tags/Markdown/"/>
     
-      <category term="uniapp" scheme="https://lowkey-lau.github.io/tags/uniapp/"/>
+      <category term="Uniapp" scheme="https://lowkey-lau.github.io/tags/Uniapp/"/>
     
   </entry>
   
@@ -126,7 +126,7 @@
     <link href="https://lowkey-lau.github.io/2019/08/27/article1/"/>
     <id>https://lowkey-lau.github.io/2019/08/27/article1/</id>
     <published>2019-08-27T07:16:52.473Z</published>
-    <updated>2019-08-28T04:16:27.719Z</updated>
+    <updated>2019-08-29T02:44:34.817Z</updated>
     
     <content type="html"><![CDATA[<p>测试使用这个新的主题</p><a id="more"></a><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><blockquote><p>区块引用</p><blockquote><p>嵌套引用</p><blockquote><p>三嵌套引用</p><blockquote><p>四嵌套引用</p></blockquote></blockquote></blockquote></blockquote><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">代码块</span><br></pre></td></tr></table></figure><p><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="测试图片"></p>]]></content>
     
@@ -141,7 +141,7 @@
     
       <category term="Markdown" scheme="https://lowkey-lau.github.io/tags/Markdown/"/>
     
-      <category term="uniapp" scheme="https://lowkey-lau.github.io/tags/uniapp/"/>
+      <category term="Uniapp" scheme="https://lowkey-lau.github.io/tags/Uniapp/"/>
     
   </entry>
   

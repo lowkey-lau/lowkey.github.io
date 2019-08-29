@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lowkey-lau.github.io/"/>
-  <updated>2019-08-29T03:37:13.526Z</updated>
+  <updated>2019-08-29T09:44:28.457Z</updated>
   <id>https://lowkey-lau.github.io/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Markdown 写法记录</title>
-    <link href="https://lowkey-lau.github.io/2019/08/28/diary-2/"/>
-    <id>https://lowkey-lau.github.io/2019/08/28/diary-2/</id>
-    <published>2019-08-28T02:10:07.774Z</published>
-    <updated>2019-08-29T03:37:13.526Z</updated>
+    <title>Hexo 的 NextT 主题（Mist）设置图片居中</title>
+    <link href="https://lowkey-lau.github.io/2019/08/29/posts-4/"/>
+    <id>https://lowkey-lau.github.io/2019/08/29/posts-4/</id>
+    <published>2019-08-29T07:23:22.000Z</published>
+    <updated>2019-08-29T09:44:28.457Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>因为现在开始记录博客了，而写博客使用Markdown的写法，所以想要在这里记录一下Markdown的写法，以作参考使用</p></blockquote><a id="more"></a><hr><h2 id="Markdown-的创始人"><a href="#Markdown-的创始人" class="headerlink" title="Markdown 的创始人"></a>Markdown 的创始人</h2><p><img src="https://upload-images.jianshu.io/upload_images/1293430-67a409e21507d498.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/401/format/webp" alt="Aaron Swartz 大神照片&#39;"><span class="image-caption">Aaron Swartz 大神照片&#39;</span></p><blockquote><p>Aaron Swartz 大神照片</p></blockquote><hr><h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h2><p>标题共有六个级别,使用 <code>#</code> 来区分层级</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 一级标题</span></span><br><span class="line"><span class="comment">## 二级标题</span></span><br><span class="line"><span class="comment">### 三级标题</span></span><br><span class="line"><span class="comment">#### 四级标题</span></span><br><span class="line"><span class="comment">##### 五级标题</span></span><br><span class="line"><span class="comment">###### 六级标题</span></span><br></pre></td></tr></table></figure><p><em>注：# 和字符之间建议保留一个字符的空格，这是最标准的 Markdown 写法。</em></p><hr><h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2. 字体"></a>2. 字体</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">斜体设置： *我是斜体* </span><br><span class="line">粗体设置： **我是粗体**</span><br><span class="line">斜体加粗体设置： ***我是斜体加粗体***</span><br><span class="line">删除字符串设置： ~我是删除字符串~</span><br></pre></td></tr></table></figure><p>显示效果为:</p><blockquote><p><em>我是斜体</em><br><strong>我是粗体</strong><br><strong><em>我是斜体加粗体</em></strong><br><del>我是删除字符串</del></p></blockquote><hr><h2 id="3-代码块"><a href="#3-代码块" class="headerlink" title="3. 代码块"></a>3. 代码块</h2><h3 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h3><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">`这是单行代码`</span><br></pre></td></tr></table></figure><p>显示效果为:<br><code>这是单行代码</code></p><h3 id="多行代码"><a href="#多行代码" class="headerlink" title="多行代码"></a>多行代码</h3><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line">这是代码块</span><br><span class="line">```</span><br></pre></td></tr></table></figure><p>显示效果为:</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">这是代码块</span><br></pre></td></tr></table></figure><hr><h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4. 引用"></a>4. 引用</h2><p>可以无限制的引用下去</p><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">&gt; 我是第一级引用</span><br><span class="line"><span class="meta">&gt;&gt;</span> 我是第二级引用</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; 我是第三级引用</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt;&gt; ...</span><br></pre></td></tr></table></figure><p>显示效果为:</p><blockquote><p>我是第一级引用</p><blockquote><p>我是第二级引用</p><blockquote><p>我是第三级引用</p><blockquote><p>…</p></blockquote></blockquote></blockquote></blockquote><hr><h2 id="5-列表"><a href="#5-列表" class="headerlink" title="5. 列表"></a>5. 列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>使用 <code>-</code> 、 <code>+</code> 、 <code>*</code> 书写<br>效果：</p><ul><li>1</li><li>2</li><li>3</li></ul><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>使用 <code>1.</code> 、 <code>2.</code> 、 <code>3.</code> 书写</p><p>效果：</p><ol><li>1</li><li>2</li><li>7 (会按照序列强制编排,例如我这一行使用的是 <code>7.</code> )</li></ol><hr><h2 id="6-链接"><a href="#6-链接" class="headerlink" title="6. 链接"></a>6. 链接</h2><blockquote><p>插入超链接不需要其他按钮，你只需要使用 <strong>[显示文本](链接地址)</strong> 这样的语法即可</p></blockquote><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">我是链接，点我</span>](<span class="link">https://lowkey-lau.github.io/</span>)</span><br></pre></td></tr></table></figure><p>效果显示为：<br><a href="https://lowkey-lau.github.io/">我是链接，点我</a></p><blockquote><p>插入图片不需要其他按钮，你只需要使用 <strong>![](图片链接地址)</strong> 这样的语法即可</p></blockquote><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">我是图片备注</span>](<span class="link">http://zh.mweb.im/asset/img/set-up-git.gif</span>)</span><br></pre></td></tr></table></figure><p>效果显示为：<br><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="我是图片备注"><span class="image-caption">我是图片备注</span></p><p>显示效果为: </p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>最近在编写博文时，使用这个主题发现插入图片默认是靠右显示的，插入小图片的时候布局非常不美观，因此在这里做一个小小的修改</p></blockquote><a id="more"></a><p>首先去了解了Hexo渲染的机制，发现是由主题控制的，因此找呀找，找到 <code>themes/next/source/css/_schemes/Mist/_posts-expanded.styl</code> 这个文件，找到 <code>.posts-expand</code> 中的 <code>.post-body img { margin-left: 0; }</code>，将之修改为 <code>.post-body img { margin: 0 auto; }</code> 即可。</p><p>然后顺便一提不晓得是不是我设置了啥，发现原本应该会出现的图片标签/注释显示不出来，又去找了一波资料</p><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>找到了一个插件 <code>hexo-image-caption</code>，安装 <code>npm install --save hexo-image-caption</code> ,然后在站点设置文件末尾添加</p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">image_caption:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span> <span class="comment">#false to disable</span></span><br><span class="line"><span class="attr">  class_name:</span> <span class="comment">#if you wanna customize the style for the caption,you can assign a class name, default is 'image-caption'</span></span><br></pre></td></tr></table></figure><h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在Next官网 issue 看到了个修复方式，不需要安装插件，直接Markdown写法改写<br><code>![备注](地址 &#39;备注&#39;)</code> 也可以解决，详情可以在 <a href="https://github.com/iissnan/hexo-theme-next/issues/436" target="_blank" rel="noopener">Next - issues - 436</a> 这里查看。</p><hr><p>然后就出来了效果，可是这时候样式我个人是不欣赏的，我就着手修改<br>找到 <code>themes/next/source/css/_common/components/post/post.styl</code> 这个文件，找到 <code>.image-caption</code>，修改成以下样式</p><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.image-caption</span> &#123;</span><br><span class="line"><span class="attribute">min-width</span>: <span class="number">20%</span>;</span><br><span class="line"><span class="attribute">max-width</span>: <span class="number">80%</span>;</span><br><span class="line"><span class="attribute">min-height</span>: <span class="number">22px</span>;</span><br><span class="line"><span class="attribute">display</span>: block;</span><br><span class="line"><span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line"><span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line"><span class="attribute">color</span>: <span class="number">#969696</span>;</span><br><span class="line"><span class="attribute">line-height</span>: <span class="number">1.7</span>;</span><br><span class="line"><span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>如果想要个虚线的话也可以另外添加一个</p><figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.image-caption</span>:after&#123;</span><br><span class="line"><span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line"><span class="attribute">width</span> 100px;</span><br><span class="line"><span class="attribute">height</span> 1px;</span><br><span class="line"><span class="attribute">display</span>: block;</span><br><span class="line"><span class="attribute">margin</span>: <span class="number">10px</span> auto;</span><br><span class="line"><span class="attribute">background-color</span>: <span class="number">#d9d9d9</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>效果如下：<br><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="测试图片"></p>]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;因为现在开始记录博客了，而写博客使用Markdown的写法，所以想要在这里记录一下Markdown的写法，以作参考使用&lt;/p&gt;
+&lt;p&gt;最近在编写博文时，使用这个主题发现插入图片默认是靠右显示的，插入小图片的时候布局非常不美观，因此在这里做一个小小的修改&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -36,25 +36,26 @@
       <category term="干货" scheme="https://lowkey-lau.github.io/categories/%E5%B9%B2%E8%B4%A7/"/>
     
     
-      <category term="日记" scheme="https://lowkey-lau.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+      <category term="前端" scheme="https://lowkey-lau.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Markdown" scheme="https://lowkey-lau.github.io/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>使用Uniapp遇见的坑 -- 1</title>
-    <link href="https://lowkey-lau.github.io/2019/08/27/artice-1/"/>
-    <id>https://lowkey-lau.github.io/2019/08/27/artice-1/</id>
-    <published>2019-08-27T10:13:19.847Z</published>
-    <updated>2019-08-28T04:16:38.620Z</updated>
+    <link href="https://lowkey-lau.github.io/2019/08/29/posts-3/"/>
+    <id>https://lowkey-lau.github.io/2019/08/29/posts-3/</id>
+    <published>2019-08-29T07:22:22.000Z</published>
+    <updated>2019-08-29T07:56:35.296Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>在使用Uniapp开发webAPP的时候，总会遇见或多或小的坑</p></blockquote><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>某个元素使用 <em>position: absolute</em> 的时候，如果父级是page或者类似的元素，在手机端会出现定位不准确的问题</p><a id="more"></a><h2 id="解决方法（仅供参考）"><a href="#解决方法（仅供参考）" class="headerlink" title="解决方法（仅供参考）"></a>解决方法（仅供参考）</h2><p><strong>使用Uniapp特有的一个判断来实现</strong></p><p>可使用* #ifdef APP-PLUS * 来判定当前页面是否为手机端</p><p>示例</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/* <span class="comment">#ifdef APP-PLUS */</span></span><br><span class="line">top: calc(【你的原始变量】 + var(--status-bar-height));</span><br><span class="line">/* <span class="comment">#endif */</span></span><br></pre></td></tr></table></figure><blockquote><p>如果文中有什么不足或者不准确的地方，请各位大佬提出来，一起进步，谢谢！</p></blockquote><!-- ![测试图片](http://zh.mweb.im/asset/img/set-up-git.gif) -->]]></content>
+    <content type="html"><![CDATA[<blockquote><p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑,现在在这里记录，不定时更新</p></blockquote><a id="more"></a><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>某个元素使用 <em>position: absolute</em> 的时候，如果父级是page或者类似的元素，在手机端会出现定位不准确的问题</p><h2 id="解决方法（仅供参考）"><a href="#解决方法（仅供参考）" class="headerlink" title="解决方法（仅供参考）"></a>解决方法（仅供参考）</h2><p><strong>使用Uniapp特有的一个判断来实现</strong></p><p>可使用* #ifdef APP-PLUS * 来判定当前页面是否为手机端</p><p>示例</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/* <span class="comment">#ifdef APP-PLUS */</span></span><br><span class="line">top: calc(【你的原始变量】 + var(--status-bar-height));</span><br><span class="line">/* <span class="comment">#endif */</span></span><br></pre></td></tr></table></figure><blockquote><p>如果文中有什么不足或者不准确的地方，请各位大佬提出来，一起进步，谢谢！</p></blockquote><!-- ![测试图片](http://zh.mweb.im/asset/img/set-up-git.gif) -->]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;在使用Uniapp开发webAPP的时候，总会遇见或多或小的坑&lt;/p&gt;
+&lt;p&gt;在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑,现在在这里记录，不定时更新&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;某个元素使用 &lt;em&gt;position: absolute&lt;/em&gt; 的时候，如果父级是page或者类似的元素，在手机端会出现定位不准确的问题&lt;/p&gt;
     
     </summary>
     
@@ -74,9 +75,33 @@
   </entry>
   
   <entry>
+    <title>Markdown 写法记录</title>
+    <link href="https://lowkey-lau.github.io/2019/08/28/posts-2/"/>
+    <id>https://lowkey-lau.github.io/2019/08/28/posts-2/</id>
+    <published>2019-08-28T02:10:07.774Z</published>
+    <updated>2019-08-29T08:09:38.307Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>因为现在开始记录博客了，而写博客使用Markdown的写法，所以想要在这里记录一下Markdown的写法，以作参考使用</p></blockquote><a id="more"></a><hr><h2 id="Markdown-的创始人"><a href="#Markdown-的创始人" class="headerlink" title="Markdown 的创始人"></a>Markdown 的创始人</h2><p><img src="https://upload-images.jianshu.io/upload_images/1293430-67a409e21507d498.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/401/format/webp" alt="Aaron Swartz 大神照片" title="Aaron Swartz 大神照片"></p><!-- > Aaron Swartz 大神照片 --><hr><h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h2><p>标题共有六个级别,使用 <code>#</code> 来区分层级</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 一级标题</span></span><br><span class="line"><span class="comment">## 二级标题</span></span><br><span class="line"><span class="comment">### 三级标题</span></span><br><span class="line"><span class="comment">#### 四级标题</span></span><br><span class="line"><span class="comment">##### 五级标题</span></span><br><span class="line"><span class="comment">###### 六级标题</span></span><br></pre></td></tr></table></figure><p><em>注：# 和字符之间建议保留一个字符的空格，这是最标准的 Markdown 写法。</em></p><hr><h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2. 字体"></a>2. 字体</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">斜体设置： *我是斜体* </span><br><span class="line">粗体设置： **我是粗体**</span><br><span class="line">斜体加粗体设置： ***我是斜体加粗体***</span><br><span class="line">删除字符串设置： ~我是删除字符串~</span><br></pre></td></tr></table></figure><p>显示效果为:</p><blockquote><p><em>我是斜体</em><br><strong>我是粗体</strong><br><strong><em>我是斜体加粗体</em></strong><br><del>我是删除字符串</del></p></blockquote><hr><h2 id="3-代码块"><a href="#3-代码块" class="headerlink" title="3. 代码块"></a>3. 代码块</h2><h3 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h3><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">`这是单行代码`</span><br></pre></td></tr></table></figure><p>显示效果为:<br><code>这是单行代码</code></p><h3 id="多行代码"><a href="#多行代码" class="headerlink" title="多行代码"></a>多行代码</h3><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line">这是代码块</span><br><span class="line">```</span><br></pre></td></tr></table></figure><p>显示效果为:</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">这是代码块</span><br></pre></td></tr></table></figure><hr><h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4. 引用"></a>4. 引用</h2><p>可以无限制的引用下去</p><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">&gt; 我是第一级引用</span><br><span class="line"><span class="meta">&gt;&gt;</span> 我是第二级引用</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; 我是第三级引用</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt;&gt; ...</span><br></pre></td></tr></table></figure><p>显示效果为:</p><blockquote><p>我是第一级引用</p><blockquote><p>我是第二级引用</p><blockquote><p>我是第三级引用</p><blockquote><p>…</p></blockquote></blockquote></blockquote></blockquote><hr><h2 id="5-列表"><a href="#5-列表" class="headerlink" title="5. 列表"></a>5. 列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>使用 <code>-</code> 、 <code>+</code> 、 <code>*</code> 书写<br>效果：</p><ul><li>1</li><li>2</li><li>3</li></ul><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>使用 <code>1.</code> 、 <code>2.</code> 、 <code>3.</code> 书写</p><p>效果：</p><ol><li>1</li><li>2</li><li>7 (会按照序列强制编排,例如我这一行使用的是 <code>7.</code> )</li></ol><hr><h2 id="6-链接"><a href="#6-链接" class="headerlink" title="6. 链接"></a>6. 链接</h2><blockquote><p>插入超链接不需要其他按钮，你只需要使用 <strong>[显示文本](链接地址)</strong> 这样的语法即可</p></blockquote><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">我是链接，点我</span>](<span class="link">https://lowkey-lau.github.io/</span>)</span><br></pre></td></tr></table></figure><p>效果显示为：<br><a href="https://lowkey-lau.github.io/">我是链接，点我</a></p><blockquote><p>插入图片不需要其他按钮，你只需要使用 <strong>![](图片链接地址)</strong> 这样的语法即可</p></blockquote><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">我是图片备注</span>](<span class="link">http://zh.mweb.im/asset/img/set-up-git.gif</span>)</span><br><span class="line"></span><br><span class="line">另外发现Hexo的Next主题需要 ![<span class="string">我是图片备注</span>](<span class="link">http://zh.mweb.im/asset/img/set-up-git.gif "我是图片备注"</span>) 这种写法才能显示</span><br></pre></td></tr></table></figure><p>效果显示为：<br><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="我是图片备注" title="我是图片备注"></p><p>显示效果为: </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;因为现在开始记录博客了，而写博客使用Markdown的写法，所以想要在这里记录一下Markdown的写法，以作参考使用&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="干货" scheme="https://lowkey-lau.github.io/categories/%E5%B9%B2%E8%B4%A7/"/>
+    
+    
+      <category term="日记" scheme="https://lowkey-lau.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从这个博客站当我的新起点吧</title>
-    <link href="https://lowkey-lau.github.io/2019/08/27/diary-1/"/>
-    <id>https://lowkey-lau.github.io/2019/08/27/diary-1/</id>
+    <link href="https://lowkey-lau.github.io/2019/08/27/posts-1/"/>
+    <id>https://lowkey-lau.github.io/2019/08/27/posts-1/</id>
     <published>2019-08-27T09:26:34.787Z</published>
     <updated>2019-08-28T10:31:40.828Z</updated>
     
@@ -94,54 +119,6 @@
     
     
       <category term="日记" scheme="https://lowkey-lau.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试测试</title>
-    <link href="https://lowkey-lau.github.io/2019/08/27/article2/"/>
-    <id>https://lowkey-lau.github.io/2019/08/27/article2/</id>
-    <published>2019-08-27T08:30:57.337Z</published>
-    <updated>2019-08-29T02:44:36.850Z</updated>
-    
-    <content type="html"><![CDATA[<p>测试使用这个新的主题</p><a id="more"></a><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><blockquote><p>区块引用</p><blockquote><p>嵌套引用</p><blockquote><p>三嵌套引用</p><blockquote><p>四嵌套引用</p></blockquote></blockquote></blockquote></blockquote><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">代码块</span><br></pre></td></tr></table></figure><p><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="GitHub set up"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;测试使用这个新的主题&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="web前端" scheme="https://lowkey-lau.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="Markdown" scheme="https://lowkey-lau.github.io/tags/Markdown/"/>
-    
-      <category term="Uniapp" scheme="https://lowkey-lau.github.io/tags/Uniapp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试测试</title>
-    <link href="https://lowkey-lau.github.io/2019/08/27/article1/"/>
-    <id>https://lowkey-lau.github.io/2019/08/27/article1/</id>
-    <published>2019-08-27T07:16:52.473Z</published>
-    <updated>2019-08-29T02:44:34.817Z</updated>
-    
-    <content type="html"><![CDATA[<p>测试使用这个新的主题</p><a id="more"></a><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><blockquote><p>区块引用</p><blockquote><p>嵌套引用</p><blockquote><p>三嵌套引用</p><blockquote><p>四嵌套引用</p></blockquote></blockquote></blockquote></blockquote><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">代码块</span><br></pre></td></tr></table></figure><p><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="测试图片"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;测试使用这个新的主题&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="web前端" scheme="https://lowkey-lau.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="Markdown" scheme="https://lowkey-lau.github.io/tags/Markdown/"/>
-    
-      <category term="Uniapp" scheme="https://lowkey-lau.github.io/tags/Uniapp/"/>
     
   </entry>
   

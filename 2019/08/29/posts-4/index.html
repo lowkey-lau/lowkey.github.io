@@ -19,6 +19,7 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -32,7 +33,7 @@
     copycode: {"enable":false,"show_result":false,"style":null},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
     lazyload: false,
     pangu: false,
@@ -63,7 +64,7 @@
 <meta property="og:description" content="最近在编写博文时，使用这个主题发现插入图片默认是靠右显示的，插入小图片的时候布局非常不美观，因此在这里做一个小小的修改">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zh.mweb.im/asset/img/set-up-git.gif">
-<meta property="og:updated_time" content="2019-08-29T09:44:28.457Z">
+<meta property="og:updated_time" content="2019-08-30T02:42:15.735Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 的 NextT 主题（Mist）设置图片居中">
 <meta name="twitter:description" content="最近在编写博文时，使用这个主题发现插入图片默认是靠右显示的，插入小图片的时候布局非常不美观，因此在这里做一个小小的修改">
@@ -262,11 +263,19 @@
                 
               
 
-              <time title="创建时间：2019-08-29 15:23:22 / 修改时间：17:44:28" itemprop="dateCreated datePublished" datetime="2019-08-29T15:23:22+08:00">2019-08-29</time>
+              <time title="创建时间：2019-08-29 15:23:22" itemprop="dateCreated datePublished" datetime="2019-08-29T15:23:22+08:00">2019-08-29</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-30 10:42:15" itemprop="dateModified" datetime="2019-08-30T10:42:15+08:00">2019-08-30</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -312,7 +321,7 @@
 <h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>找到了一个插件 <code>hexo-image-caption</code>，安装 <code>npm install --save hexo-image-caption</code> ,然后在站点设置文件末尾添加</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">image_caption:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span> <span class="comment">#false to disable</span></span><br><span class="line"><span class="attr">  class_name:</span> <span class="comment">#if you wanna customize the style for the caption,you can assign a class name, default is 'image-caption'</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在Next官网 issue 看到了个修复方式，不需要安装插件，直接Markdown写法改写<br><code>![备注](地址 &#39;备注&#39;)</code> 也可以解决，详情可以在 <a href="https://github.com/iissnan/hexo-theme-next/issues/436" target="_blank" rel="noopener">Next - issues - 436</a> 这里查看。</p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在Next官网 issue 看到了个修复方式，不需要安装插件。<br>首先需要在主题设置文件里找到 <code>Fancybox</code> 把它设置为 <code>true</code>，然后写法使用<br><code>![备注](地址 &#39;备注&#39;)</code> 即可解决，详情可以在 <a href="https://github.com/iissnan/hexo-theme-next/issues/436" target="_blank" rel="noopener">Next - issues - 436</a> 这里查看。</p>
 <hr>
 <p>然后就出来了效果，可是这时候样式我个人是不欣赏的，我就着手修改<br>找到 <code>themes/next/source/css/_common/components/post/post.styl</code> 这个文件，找到 <code>.image-caption</code>，修改成以下样式</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.image-caption</span> &#123;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">20%</span>;</span><br><span class="line">	<span class="attribute">max-width</span>: <span class="number">80%</span>;</span><br><span class="line">	<span class="attribute">min-height</span>: <span class="number">22px</span>;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#969696</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">1.7</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -320,7 +329,7 @@
 <p>如果想要个虚线的话也可以另外添加一个</p>
 <figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.image-caption</span>:after&#123;</span><br><span class="line">	<span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">	<span class="attribute">width</span> 100px;</span><br><span class="line">	<span class="attribute">height</span> 1px;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">10px</span> auto;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#d9d9d9</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>效果如下：<br><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="测试图片"></p>
+<p>效果如下：<br><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="测试图片" title="测试图片"><span class="image-caption">测试图片</span></p>
 
     </div>
 
@@ -561,7 +570,6 @@
   </span>
   <span class="author" itemprop="copyrightHolder">刘俊杭(Lowkey)</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
         
 <div class="busuanzi-count">
@@ -570,7 +578,7 @@
       <i class="fa fa-user"></i>
     </span>
     <span class="site-uv" title="总访客量">
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      总访问量<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>次
     </span>
   
     <span class="post-meta-divider">|</span>
@@ -579,7 +587,7 @@
       <i class="fa fa-eye"></i>
     </span>
     <span class="site-pv" title="总访问量">
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      总访客<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>人
     </span>
   
 </div>
@@ -605,6 +613,7 @@
   
   <script color='0,0,0' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
   <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 <script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
@@ -641,7 +650,6 @@
   
 
   
-
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7},"tagMode":false});</script></body>
 </html>

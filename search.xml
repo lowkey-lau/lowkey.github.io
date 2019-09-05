@@ -41,7 +41,7 @@
 <p>是不是这样会简单理解一点</p>
 </blockquote>
 <hr>
-<h2 id="在-LESS、SCSS-使用-BEM"><a href="#在-LESS、SCSS-使用-BEM" class="headerlink" title="在 LESS、SCSS 使用 BEM"></a>在 LESS、SCSS 使用 BEM</h2><figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.main</span>&#123;</span><br><span class="line"> &amp;-block&#123;</span><br><span class="line">  &amp;__title&#123;</span><br><span class="line">   &amp;--fullsize&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">100%</span>;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="在-LESS、SCSS-使用-BEM"><a href="#在-LESS、SCSS-使用-BEM" class="headerlink" title="在 LESS、SCSS 使用 BEM"></a>在 LESS、SCSS 使用 BEM</h2><figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.main</span>&#123;</span><br><span class="line">	&amp;-block&#123;</span><br><span class="line">		&amp;__title&#123;</span><br><span class="line">			&amp;--fullsize&#123;</span><br><span class="line">				<span class="attribute">font-size</span>: <span class="number">100%</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>可以得出 <code>.main-block__title--fullsize: 100%</code>。<br>日常项目中，个人使用的是 <code>.block-element__element-element--modifier</code>,当然，仅供参考。</p>
 <h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>

@@ -3,6 +3,78 @@
   
     
     <entry>
+      <title><![CDATA[代码规范之 -- BEM]]></title>
+      <url>/2019/09/05/posts-5/</url>
+      <content type="html"><![CDATA[<h2 id="引文"><a href="#引文" class="headerlink" title="引文"></a>引文</h2><blockquote>
+<p>在某公司的熏陶下，我对代码这一块看的比较重。好的书写规范便于日常的修改及维护，也便于后人的加入。</p>
+</blockquote>
+<a id="more"></a>
+
+
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="什么是BEM"><a href="#什么是BEM" class="headerlink" title="什么是BEM"></a>什么是BEM</h3><blockquote>
+<p><strong>BEM</strong> 是 <code>Block（块）</code>  <code>Element（元素）</code>  <code>Modifier（修饰器）</code> 的简称，是由Yandex团队提出的一种前端命名规范。 其核心思想是将页面拆分成一个个独立的富有语义的块（blocks）,从而使得团队在开发复杂的项目变得高效，并且十分有利于代码复用，即便团队引入新成员，也容易维护。   </p>
+</blockquote>
+<p><code>个人理解就是这个写法可以让我很快速的去更改某一个元素的样式，又不会影响全局</code></p>
+<h3 id="为什么要使用代码规范"><a href="#为什么要使用代码规范" class="headerlink" title="为什么要使用代码规范"></a>为什么要使用代码规范</h3><p>我们经常在制作网页时，通常会遇到如下的CSS样式</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.main</span> <span class="selector-class">.form</span> <span class="selector-class">.wrapper</span> &#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto; <span class="comment">/*写入你需要的css*/</span></span><br><span class="line">&#125;  </span><br><span class="line"><span class="selector-class">.main</span> <span class="selector-class">.form</span> <span class="selector-class">.text</span>  &#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto; <span class="comment">/*写入你需要的css*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.page</span> <span class="selector-class">.warpper</span> <span class="selector-class">.layout</span> <span class="selector-class">.main</span>&#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto; <span class="comment">/*写入你需要的css*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样的书写方式是我们最常见的写法，他虽然解决了单纯全局互相影响的问题，但是另外一方面也延伸出了一些问题：</p>
+<ul>
+<li>维护css的时候，css的作用域会对后来维护人员造成很大的困扰</li>
+<li>如果出现某个共同属性，css的优先级是个头疼问题。</li>
+<li>css编写的时候复用性不高，当存在多个样式一致的时候，我们可能会选择减少命名空间的方式来提升当前css的作用范围，但是可能会导致css样式冲突的问题。</li>
+<li>(欢迎大家补充)</li>
+</ul>
+<hr>
+<blockquote>
+<p>想了想怎么让人更加通俗的理解意思，我们把项目比喻成 <strong>房子</strong>，嗯，就是这样~</p>
+</blockquote>
+<hr>
+<h2 id="Block（块）"><a href="#Block（块）" class="headerlink" title="Block（块）"></a>Block（块）</h2><p>一个块是一个独立的实体，既可以是简单的也可以是复合的（包含其他块）。如果项目是一个房子，我们可以理解为块就是房子里的一个 <strong>房间</strong></p>
+<p>例如我想描述的是 <strong>房子</strong> 里的 <em>房间</em> ，我可以命名为<br><code>.room</code></p>
+<h2 id="Element（元素）"><a href="#Element（元素）" class="headerlink" title="Element（元素）"></a>Element（元素）</h2><p>一个元素是块的一部分，具有某种功能。元素是依赖上下文的：它们只有处于他们应该属于的块的上下文中时才是有意义的。</p>
+<p>例如我想描述的是 <strong>房间</strong> 里的 <em>床</em>，我可以命名为<br><code>.room-bed</code></p>
+<h2 id="Modifier（修饰器）"><a href="#Modifier（修饰器）" class="headerlink" title="Modifier（修饰器）"></a>Modifier（修饰器）</h2><p>Modifier定义block和element的外观,状态,或者行为。</p>
+<p>例如我想描述的是 <strong>房间</strong> 里的 <em>床</em> 的颜色为 <strong><em>红色</em></strong>，我可以命名为<br><code>.room-bed--red</code></p>
+<hr>
+<blockquote>
+<p>是不是这样会简单理解一点</p>
+</blockquote>
+<hr>
+<h2 id="在-LESS、SCSS-使用-BEM"><a href="#在-LESS、SCSS-使用-BEM" class="headerlink" title="在 LESS、SCSS 使用 BEM"></a>在 LESS、SCSS 使用 BEM</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.main</span>&#123;</span><br><span class="line"> &amp;-block&#123;</span><br><span class="line">  &amp;__<span class="selector-tag">title</span>&#123;</span><br><span class="line">   &amp;--fullsize&#123;</span><br><span class="line">    <span class="selector-tag">font-size</span>: 100%;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以得出 <code>.main-block__title--fullsize: 100%</code>。<br>日常项目中，个人使用的是 <code>.block-element__element-element--modifier</code>,当然，仅供参考。</p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
+<li>个人推荐 <strong>Element</strong> 的添加最多不要超过3个，既  <code>.block-element__element-element</code>  差不多了，当然，看你自己。</li>
+<li><strong>Class</strong> 的数量尽可能少，防止css出现优先级竞争</li>
+<li>一个 <strong>Block</strong> 推荐单独抽出来书写，方便重复利用。</li>
+<li>为了方便自己及他人，推荐使用 <strong>英文直译</strong> 作为元素的命名。</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>在实际项目中，个人认为一个好的代码规范可以使团队的工作变得更加效率，也方便拿作品展示给他人。</li>
+<li>BEM 使代码的能够有更好的可用性、可延伸性。</li>
+<li>加油，你是最胖(棒)的。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 干货 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> css </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo 的 NextT 主题（Mist）设置图片居中]]></title>
       <url>/2019/08/29/posts-4/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -35,9 +107,9 @@
         
         <tags>
             
-            <tag> Markdown </tag>
-            
             <tag> 前端 </tag>
+            
+            <tag> Markdown </tag>
             
         </tags>
         

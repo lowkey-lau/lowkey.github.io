@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="引文 在某公司的熏陶下，我对代码这一块看的比较重。好的书写规范便于日常的修改及维护，也便于后人的加入。">
+  <meta name="description" content="在某公司的熏陶下，我对代码这一块看的比较重。好的书写规范便于日常的修改及维护，也便于后人的加入。">
 <meta name="keywords" content="前端,css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="代码规范之 -- BEM">
 <meta property="og:url" content="https://lowkey-lau.github.io/2019/09/05/posts-5/index.html">
 <meta property="og:site_name" content="Lowkey">
-<meta property="og:description" content="引文 在某公司的熏陶下，我对代码这一块看的比较重。好的书写规范便于日常的修改及维护，也便于后人的加入。">
+<meta property="og:description" content="在某公司的熏陶下，我对代码这一块看的比较重。好的书写规范便于日常的修改及维护，也便于后人的加入。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-05T09:51:33.016Z">
+<meta property="og:updated_time" content="2019-09-05T09:55:14.416Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="代码规范之 -- BEM">
-<meta name="twitter:description" content="引文 在某公司的熏陶下，我对代码这一块看的比较重。好的书写规范便于日常的修改及维护，也便于后人的加入。">
+<meta name="twitter:description" content="在某公司的熏陶下，我对代码这一块看的比较重。好的书写规范便于日常的修改及维护，也便于后人的加入。">
   <link rel="alternate" href="/atom.xml" title="Lowkey" type="application/atom+xml">
   <link rel="canonical" href="https://lowkey-lau.github.io/2019/09/05/posts-5/">
 
@@ -261,7 +261,7 @@
                 
               
 
-              <time title="创建时间：2019-09-05 11:18:48 / 修改时间：17:51:33" itemprop="dateCreated datePublished" datetime="2019-09-05T11:18:48+08:00">2019-09-05</time>
+              <time title="创建时间：2019-09-05 11:18:48 / 修改时间：17:55:14" itemprop="dateCreated datePublished" datetime="2019-09-05T11:18:48+08:00">2019-09-05</time>
             </span>
           
             
@@ -301,7 +301,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="引文"><a href="#引文" class="headerlink" title="引文"></a>引文</h2><blockquote>
+        <blockquote>
 <p>在某公司的熏陶下，我对代码这一块看的比较重。好的书写规范便于日常的修改及维护，也便于后人的加入。</p>
 </blockquote>
 <a id="more"></a>
@@ -337,7 +337,7 @@
 <p>是不是这样会简单理解一点</p>
 </blockquote>
 <hr>
-<h2 id="在-LESS、SCSS-使用-BEM"><a href="#在-LESS、SCSS-使用-BEM" class="headerlink" title="在 LESS、SCSS 使用 BEM"></a>在 LESS、SCSS 使用 BEM</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.main</span>&#123;</span><br><span class="line"> &amp;-block&#123;</span><br><span class="line">  &amp;__<span class="selector-tag">title</span>&#123;</span><br><span class="line">   &amp;--fullsize&#123;</span><br><span class="line">    <span class="selector-tag">font-size</span>: 100%;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="在-LESS、SCSS-使用-BEM"><a href="#在-LESS、SCSS-使用-BEM" class="headerlink" title="在 LESS、SCSS 使用 BEM"></a>在 LESS、SCSS 使用 BEM</h2><figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.main</span>&#123;</span><br><span class="line"> &amp;-block&#123;</span><br><span class="line">  &amp;__title&#123;</span><br><span class="line">   &amp;--fullsize&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">100%</span>;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>可以得出 <code>.main-block__title--fullsize: 100%</code>。<br>日常项目中，个人使用的是 <code>.block-element__element-element--modifier</code>,当然，仅供参考。</p>
 <h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
@@ -467,7 +467,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引文"><span class="nav-text">引文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是BEM"><span class="nav-text">什么是BEM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要使用代码规范"><span class="nav-text">为什么要使用代码规范</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Block（块）"><span class="nav-text">Block（块）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Element（元素）"><span class="nav-text">Element（元素）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modifier（修饰器）"><span class="nav-text">Modifier（修饰器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在-LESS、SCSS-使用-BEM"><span class="nav-text">在 LESS、SCSS 使用 BEM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项"><span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是BEM"><span class="nav-text">什么是BEM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要使用代码规范"><span class="nav-text">为什么要使用代码规范</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Block（块）"><span class="nav-text">Block（块）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Element（元素）"><span class="nav-text">Element（元素）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modifier（修饰器）"><span class="nav-text">Modifier（修饰器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在-LESS、SCSS-使用-BEM"><span class="nav-text">在 LESS、SCSS 使用 BEM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项"><span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->

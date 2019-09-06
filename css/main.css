@@ -1822,7 +1822,7 @@ pre .selector-class {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fff;
+  background: #5cd19e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;

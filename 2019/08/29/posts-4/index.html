@@ -30,7 +30,7 @@
     version: '7.3.0',
     exturl: false,
     sidebar: {"position":"left","display":"hide","offset":12,"onmobile":false},
-    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    copycode: {"enable":true,"show_result":true,"style":"default"},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: true,
@@ -56,7 +56,7 @@
 </script>
 
   <meta name="description" content="最近在编写博文时，使用这个主题发现插入图片默认是靠右显示的，插入小图片的时候布局非常不美观，因此在这里做一个小小的修改">
-<meta name="keywords" content="前端,Markdown">
+<meta name="keywords" content="Markdown,前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 的 NextT 主题（Mist）设置图片居中">
 <meta property="og:url" content="https://lowkey-lau.github.io/2019/08/29/posts-4/index.html">
@@ -333,15 +333,15 @@
 <p>首先去了解了Hexo渲染的机制，发现是由主题控制的，因此找呀找，找到 <code>themes/next/source/css/_schemes/Mist/_posts-expanded.styl</code> 这个文件，找到 <code>.posts-expand</code> 中的 <code>.post-body img { margin-left: 0; }</code>，将之修改为 <code>.post-body img { margin: 0 auto; }</code> 即可。</p>
 <p>然后顺便一提不晓得是不是我设置了啥，发现原本应该会出现的图片标签/注释显示不出来，又去找了一波资料</p>
 <h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>找到了一个插件 <code>hexo-image-caption</code>，安装 <code>npm install --save hexo-image-caption</code> ,然后在站点设置文件末尾添加</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">image_caption:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span> <span class="comment">#false to disable</span></span><br><span class="line"><span class="attr">  class_name:</span> <span class="comment">#if you wanna customize the style for the caption,you can assign a class name, default is 'image-caption'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">image_caption:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span> <span class="comment">#false to disable</span></span><br><span class="line"><span class="attr">  class_name:</span> <span class="comment">#if you wanna customize the style for the caption,you can assign a class name, default is 'image-caption'</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在Next官网 issue 看到了个修复方式，不需要安装插件。<br>首先需要在主题设置文件里找到 <code>Fancybox</code> 把它设置为 <code>true</code>，然后写法使用<br><code>![备注](地址 &#39;备注&#39;)</code> 即可解决，详情可以在 <a href="https://github.com/iissnan/hexo-theme-next/issues/436" target="_blank" rel="noopener">Next - issues - 436</a> 这里查看。</p>
 <hr>
 <p>然后就出来了效果，可是这时候样式我个人是不欣赏的，我就着手修改<br>找到 <code>themes/next/source/css/_common/components/post/post.styl</code> 这个文件，找到 <code>.image-caption</code>，修改成以下样式</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.image-caption</span> &#123;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">20%</span>;</span><br><span class="line">	<span class="attribute">max-width</span>: <span class="number">80%</span>;</span><br><span class="line">	<span class="attribute">min-height</span>: <span class="number">22px</span>;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#969696</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">1.7</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.image-caption</span> &#123;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">20%</span>;</span><br><span class="line">	<span class="attribute">max-width</span>: <span class="number">80%</span>;</span><br><span class="line">	<span class="attribute">min-height</span>: <span class="number">22px</span>;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#969696</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">1.7</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>如果想要个虚线的话也可以另外添加一个</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.image-caption</span>:after&#123;</span><br><span class="line">	<span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">	<span class="attribute">width</span> 100px;</span><br><span class="line">	<span class="attribute">height</span> 1px;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">10px</span> auto;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#d9d9d9</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.image-caption</span>:after&#123;</span><br><span class="line">	<span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">	<span class="attribute">width</span> 100px;</span><br><span class="line">	<span class="attribute">height</span> 1px;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">10px</span> auto;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#d9d9d9</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>效果如下：<br><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="测试图片" title="测试图片"></p>
 
@@ -407,9 +407,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/前端/" rel="tag"># 前端</a>
-            
               <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+            
+              <a href="/tags/前端/" rel="tag"># 前端</a>
             
           </div>
         

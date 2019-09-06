@@ -1728,6 +1728,13 @@ pre .selector-class {
     transform: rotateZ(-30deg);
   }
 }
+.post-copyright {
+  background-color: #f9f9f9;
+  border-left: 3px solid #ff1700;
+  list-style: none;
+  margin: 2em 0 0;
+  padding: 0.5em 1em;
+}
 .sidebar {
   background: #222;
   bottom: 0;
@@ -1815,7 +1822,7 @@ pre .selector-class {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #7dff14;
+  background: #fff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2122,25 +2129,6 @@ pre .selector-class {
   50%, 70% {
     transform: scale(1.1);
   }
-}
-.popular-posts-header {
-  border-bottom: 1px solid #eee;
-  display: block;
-  font-size: 1.125em;
-  margin-bottom: 10px;
-  margin-top: 60px;
-}
-ul.popular-posts {
-  padding: 0;
-}
-ul.popular-posts .popular-posts-item {
-  margin-left: 2em;
-}
-ul.popular-posts .popular-posts-item .popular-posts-title {
-  font-size: 0.875em;
-  font-weight: normal;
-  line-height: 2.4;
-  margin: 0;
 }
 .category-all-page .category-all-title {
   text-align: center;

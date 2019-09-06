@@ -56,7 +56,7 @@
 </script>
 
   <meta name="description" content="在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑,现在在这里记录，不定时更新">
-<meta name="keywords" content="Uniapp,前端,技术,webApp">
+<meta name="keywords" content="前端,Uniapp,技术,webApp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Uniapp遇见的坑 -- 1">
 <meta property="og:url" content="https://lowkey-lau.github.io/2019/08/29/posts-3/index.html">
@@ -298,6 +298,20 @@
               <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/08/29/posts-3/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/08/29/posts-3/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -369,9 +383,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Uniapp/" rel="tag"># Uniapp</a>
-            
               <a href="/tags/前端/" rel="tag"># 前端</a>
+            
+              <a href="/tags/Uniapp/" rel="tag"># Uniapp</a>
             
               <a href="/tags/技术/" rel="tag"># 技术</a>
             
@@ -416,7 +430,7 @@
           </div>
           
     
-    <div class="comments" id="gitalk-container"></div>
+    <div class="comments" id="comments"></div>
   
 
         </div>
@@ -656,23 +670,29 @@
 
   
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID: 'ff9f653cbcb09b4a0ea3',
-      clientSecret: '7e4e04988fbd67e1ad34750d107ebf2eeb1ce484',
-      repo: 'lowkey-lau.github.io',
-      owner: 'lowkey-lau',
-      admin: ['lowkey-lau'],
-      id: '8fda0d071f1a5e06601d7c2155643002',
-        language: 'zh-CN',
-      
-      distractionFreeMode: 'true'
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'PYIndF49HqFvx0k162nC8QNO-gzGzoHsz',
+    appKey: '14a2W6cgeUSplG7HWbExq9vV',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'zh-cn' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
 </script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7},"tagMode":false});</script></body>

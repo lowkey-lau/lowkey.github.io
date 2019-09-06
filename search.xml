@@ -107,9 +107,9 @@
         
         <tags>
             
-            <tag> 前端 </tag>
-            
             <tag> Markdown </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -145,9 +145,9 @@
         
         <tags>
             
-            <tag> Uniapp </tag>
-            
             <tag> 前端 </tag>
+            
+            <tag> Uniapp </tag>
             
             <tag> 技术 </tag>
             
@@ -166,7 +166,7 @@
 <a id="more"></a>
 
 <hr>
-<h2 id="Markdown-的创始人"><a href="#Markdown-的创始人" class="headerlink" title="Markdown 的创始人"></a>Markdown 的创始人</h2><p><img src="https://upload-images.jianshu.io/upload_images/1293430-67a409e21507d498.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/401/format/webp" alt="Aaron Swartz 大神照片" title="Aaron Swartz 大神照片"></p>
+<h2 id="Markdown-的创始人"><a href="#Markdown-的创始人" class="headerlink" title="Markdown 的创始人"></a>Markdown 的创始人</h2><p><img src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=cc1dd4108a13632711edc531a18da056/c8ea15ce36d3d5396bc2470f3a87e950342ab07b.jpg" alt="Aaron Swartz 大神照片" title="Aaron Swartz 大神照片"></p>
 <!-- > Aaron Swartz 大神照片 -->
 <hr>
 <h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h2><p>标题共有六个级别,使用 <code>#</code> 来区分层级</p>
@@ -230,7 +230,7 @@
 <blockquote>
 <p>插入图片不需要其他按钮，你只需要使用 <strong>![](图片链接地址)</strong> 这样的语法即可</p>
 </blockquote>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">我是图片备注</span>](<span class="link">http://zh.mweb.im/asset/img/set-up-git.gif</span>)</span><br><span class="line"></span><br><span class="line">另外发现Hexo的Next主题需要 ![<span class="string">我是图片备注</span>](<span class="link">http://zh.mweb.im/asset/img/set-up-git.gif "我是图片备注"</span>) 这种写法才能显示</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">我是图片备注</span>](<span class="link">http://zh.mweb.im/asset/img/set-up-git.gif</span>)</span><br><span class="line"></span><br><span class="line">另外发现Hexo的Next主题需要: </span><br><span class="line"> </span><br><span class="line">![<span class="string">我是图片备注</span>](<span class="link">http://zh.mweb.im/asset/img/set-up-git.gif "我是图片备注"</span>) </span><br><span class="line"></span><br><span class="line">这种写法才能显示</span><br></pre></td></tr></table></figure>
 
 <p>效果显示为：<br><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="我是图片备注" title="我是图片备注"></p>
 <p>显示效果为: </p>

@@ -3,6 +3,48 @@
   
     
     <entry>
+      <title><![CDATA[使用Uniapp遇见的坑 -- 2]]></title>
+      <url>/2019/09/17/posts-7/</url>
+      <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
+<blockquote>
+<p>在使用类名为 <code>header</code> 时样式不能读取</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在某次项目中，定义了某个元素 <code>class</code> 为 <code>header</code> 发现样式根本不起作用</p>
+<h2 id="解决方法（仅供参考）"><a href="#解决方法（仅供参考）" class="headerlink" title="解决方法（仅供参考）"></a>解决方法（仅供参考）</h2><p>找了找资料发现这里确实存在着一些小坑，在<a href="https://uniapp.dcloud.io/use?id=%e5%91%bd%e5%90%8d%e9%99%90%e5%88%b6" target="_blank" rel="noopener">uniapp官网</a>有记载，<strong>命名方式存在限制</strong>。</p>
+<p>在 uni-app 中以下这些作为保留关键字，不可作为组件名。<br><code>a, canvas, cell, content, countdown, datepicker, div, element, embed, header, image, img, indicator, input, link, list, loading-indicator, loading, marquee, meta, refresh, richtext, script, scrollable, scroller, select, slider-neighbor, slider, slot, span, spinner, style, svg, switch, tabbar, tabheader, template, text, textarea, timepicker, trisition-group, trisition, video, view, web, Tips</code></p>
+<p><em>除以上列表中的名称外，标准的 HTML 及 SVG 标签名也不能作为组件名。</em></p>
+<hr>
+<blockquote>
+<p>如果文中有什么不足或者不准确的地方，请各位大佬提出来，一起进步，谢谢！</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端 </category>
+            
+            <category> webApp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 技术 </tag>
+            
+            <tag> webApp </tag>
+            
+            <tag> uniApp </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[祝大家2019年中秋节快乐]]></title>
       <url>/2019/09/12/posts-6/</url>
       <content type="html"><![CDATA[<p><code>在这里祝大家中秋节快乐</code></p>
@@ -139,8 +181,9 @@
     <entry>
       <title><![CDATA[使用Uniapp遇见的坑 -- 1]]></title>
       <url>/2019/08/29/posts-3/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑,现在在这里记录，不定时更新</p>
+      <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
+<blockquote>
+<p>如果一个元素根据body定位，在手机端会出现定位不准的问题</p>
 </blockquote>
 <a id="more"></a>
 
@@ -150,6 +193,7 @@
 <p>示例</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/* <span class="comment">#ifdef APP-PLUS */</span></span><br><span class="line">top: calc(【你的原始变量】 + var(--status-bar-height));</span><br><span class="line">/* <span class="comment">#endif */</span></span><br></pre></td></tr></table></figure>
 
+<hr>
 <blockquote>
 <p>如果文中有什么不足或者不准确的地方，请各位大佬提出来，一起进步，谢谢！</p>
 </blockquote>
@@ -166,13 +210,13 @@
         
         <tags>
             
-            <tag> Uniapp </tag>
-            
             <tag> 前端 </tag>
             
             <tag> 技术 </tag>
             
             <tag> webApp </tag>
+            
+            <tag> uniApp </tag>
             
         </tags>
         
@@ -350,7 +394,7 @@
 <hr>
 <h2 id="邮箱链接"><a href="#邮箱链接" class="headerlink" title="邮箱链接"></a>邮箱链接</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">xxx</span>@<span class="keyword">outlook</span>.<span class="keyword">com</span>&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>演示</strong><br><a href="mailto:&#120;&#x78;&#120;&#64;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#120;&#x78;&#120;&#64;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#99;&#111;&#x6d;</a></p>
+<p><strong>演示</strong><br><a href="mailto:&#120;&#x78;&#120;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#120;&#x78;&#120;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="params">|    a    |</span>       b       <span class="params">|      c     |</span></span><br><span class="line"><span class="params">|:-------:|</span><span class="symbol">:-------------</span> <span class="params">| ----------:|</span></span><br><span class="line"><span class="params">|   居中  |</span>     左对齐    <span class="params">|   右对齐   |</span></span><br><span class="line"><span class="params">|   1  |</span>     <span class="number">1</span>    <span class="params">|   1   |</span></span><br><span class="line"><span class="params">|   2  |</span>     <span class="number">2</span>    <span class="params">|   2   |</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>演示</strong></p>

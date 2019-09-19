@@ -3,6 +3,48 @@
   
     
     <entry>
+      <title><![CDATA[使用Uniapp遇见的坑 -- 3]]></title>
+      <url>/2019/09/19/posts-8/</url>
+      <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
+<blockquote>
+<p>在使用方法 <code>uni.getStorageSync</code> 在 <strong><em>H5</em></strong> 页面报<br><code>SyntaxError: Unexpected token Z in JSON at position 1</code> 的错误</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><em>如上所说</em></p>
+<h2 id="解决方法（仅供参考）"><a href="#解决方法（仅供参考）" class="headerlink" title="解决方法（仅供参考）"></a>解决方法（仅供参考）</h2><p>自己研究了一下代码，发现 <code>uni.getStorageSync</code> 在 <strong><em>本地存储</em></strong> 为 <strong>null</strong> 或者 <strong>单个字符串</strong> 的时候会出现这个错误，以为这个方法读取的是一个 <code>Object</code> 的格式，所以会出现这个问题。</p>
+<p>我的解决方式是一开始先判定 <strong>本地存储</strong> 里有无所需的字段，如果为 <code>null</code> 、<code>underfind</code> 、<code>空值</code> 的时候使用 <code>uni.setStorage</code> 创建一个记录，再来使用。</p>
+<p><code>需要注意的是定义的字段名最好不要设置为大众化的，以防相同产生Bug</code></p>
+<hr>
+<blockquote>
+<p>如果文中有什么不足或者不准确的地方，请各位大佬提出来，一起进步，谢谢！</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端 </category>
+            
+            <category> webApp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> uniApp </tag>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 技术 </tag>
+            
+            <tag> webApp </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[使用Uniapp遇见的坑 -- 2]]></title>
       <url>/2019/09/17/posts-7/</url>
       <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
@@ -394,7 +436,7 @@
 <hr>
 <h2 id="邮箱链接"><a href="#邮箱链接" class="headerlink" title="邮箱链接"></a>邮箱链接</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">xxx</span>@<span class="keyword">outlook</span>.<span class="keyword">com</span>&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>演示</strong><br><a href="mailto:&#x78;&#120;&#x78;&#64;&#x6f;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#x78;&#120;&#x78;&#64;&#x6f;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
+<p><strong>演示</strong><br><a href="mailto:&#x78;&#120;&#120;&#64;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#x78;&#120;&#120;&#64;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#111;&#109;</a></p>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="params">|    a    |</span>       b       <span class="params">|      c     |</span></span><br><span class="line"><span class="params">|:-------:|</span><span class="symbol">:-------------</span> <span class="params">| ----------:|</span></span><br><span class="line"><span class="params">|   居中  |</span>     左对齐    <span class="params">|   右对齐   |</span></span><br><span class="line"><span class="params">|   1  |</span>     <span class="number">1</span>    <span class="params">|   1   |</span></span><br><span class="line"><span class="params">|   2  |</span>     <span class="number">2</span>    <span class="params">|   2   |</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>演示</strong></p>

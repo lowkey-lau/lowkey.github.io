@@ -3,6 +3,47 @@
   
     
     <entry>
+      <title><![CDATA[使用Uniapp遇见的坑 -- 4]]></title>
+      <url>/2019/09/27/posts-9/</url>
+      <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
+<blockquote>
+<p>uni-app中使用父子组件,子组件中的 <em>onLoad</em> , <em>onShow</em> 方法不执行</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><em>如上所说</em></p>
+<h2 id="解决方法（仅供参考）"><a href="#解决方法（仅供参考）" class="headerlink" title="解决方法（仅供参考）"></a>解决方法（仅供参考）</h2><p>自己研究了一下，发现子组件可以使用 Vue 的 created() 生命周期，或者通过事件通知子组件。</p>
+<p><code>暂时解决方法就是子组件使用 Vue 的生命周期，可能官方以后出新规则呢~</code></p>
+<hr>
+<blockquote>
+<p>如果文中有什么不足或者不准确的地方，请各位大佬提出来，一起进步，谢谢！</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端 </category>
+            
+            <category> webApp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> uniApp </tag>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 技术 </tag>
+            
+            <tag> webApp </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[使用Uniapp遇见的坑 -- 3]]></title>
       <url>/2019/09/19/posts-8/</url>
       <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
@@ -436,7 +477,7 @@
 <hr>
 <h2 id="邮箱链接"><a href="#邮箱链接" class="headerlink" title="邮箱链接"></a>邮箱链接</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">xxx</span>@<span class="keyword">outlook</span>.<span class="keyword">com</span>&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>演示</strong><br><a href="mailto:&#x78;&#x78;&#120;&#64;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#111;&#x6d;" target="_blank" rel="noopener">&#x78;&#x78;&#120;&#64;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#111;&#x6d;</a></p>
+<p><strong>演示</strong><br><a href="mailto:&#x78;&#120;&#x78;&#64;&#111;&#117;&#116;&#108;&#111;&#x6f;&#107;&#x2e;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x78;&#120;&#x78;&#64;&#111;&#117;&#116;&#108;&#111;&#x6f;&#107;&#x2e;&#99;&#111;&#x6d;</a></p>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="params">|    a    |</span>       b       <span class="params">|      c     |</span></span><br><span class="line"><span class="params">|:-------:|</span><span class="symbol">:-------------</span> <span class="params">| ----------:|</span></span><br><span class="line"><span class="params">|   居中  |</span>     左对齐    <span class="params">|   右对齐   |</span></span><br><span class="line"><span class="params">|   1  |</span>     <span class="number">1</span>    <span class="params">|   1   |</span></span><br><span class="line"><span class="params">|   2  |</span>     <span class="number">2</span>    <span class="params">|   2   |</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>演示</strong></p>

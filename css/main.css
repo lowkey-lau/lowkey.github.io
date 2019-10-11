@@ -1811,7 +1811,7 @@ pre .selector-class {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #edffff;
+  background: #e7ccfa;
   border-radius: 50%;
   content: ' ';
   display: inline-block;

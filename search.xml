@@ -44,6 +44,51 @@
     </entry>
     
     <entry>
+      <title><![CDATA[使用Uniapp遇见的坑 -- 5]]></title>
+      <url>/2019/09/27/posts-10/</url>
+      <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
+<blockquote>
+<p>在使用Uniapp开发网站时，会出现图片 ‘闪一下’ 的白色闪动效果。</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><em>如上所说</em> （博主是使用了 <code>mode=&quot;widthFix&quot;</code> 的），官方也表明了可能是图片或者文件过大 （我测试的时候图片10KB左右）</p>
+<h2 id="解决方法（仅供参考）"><a href="#解决方法（仅供参考）" class="headerlink" title="解决方法（仅供参考）"></a>解决方法（仅供参考）</h2><p>官方也针对这个问题进行了修复：设置 <code>image{will-change: transform}</code><br><a href="https://uniapp.dcloud.io/component/image?id=image" target="_blank" rel="noopener">链接在此</a></p>
+<p>可是博主发现并不太能解决我的问题。</p>
+<p>于是我自己动手了一下，发现每次进入的时候图片会有个固定的高度，再依据 <code>mode</code> 的属性来更改图片的配置。<br>这就好办了，我在APP.vue里面设置全局 <code>image</code> 属性为 <code>height: 0</code>， 发现这个问题就这样解决，不过是针对 <code>mode=&quot;widthFix&quot;</code>的。</p>
+<blockquote>
+<p>我不太知道以后会不会衍生出奇怪的问题出来，但程序不就是这样吗，一个愿打一个愿挨，这样才能进步呀!</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>如果文中有什么不足或者不准确的地方，请各位大佬提出来，一起进步，谢谢！</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端 </category>
+            
+            <category> webApp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> uniApp </tag>
+            
+            <tag> 技术 </tag>
+            
+            <tag> webApp </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[使用Uniapp遇见的坑 -- 3]]></title>
       <url>/2019/09/19/posts-8/</url>
       <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>

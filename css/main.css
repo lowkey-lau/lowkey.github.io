@@ -651,8 +651,10 @@ pre .selector-class {
   overflow: hidden;
 }
 .post-body .group-picture-column {
-  float: left;
-  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.post-body .group-picture-column img {
+  margin: 0 auto;
 }
 .post-body .label {
   display: inline;
@@ -1811,7 +1813,7 @@ pre .selector-class {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #00f116;
+  background: #ffffd7;
   border-radius: 50%;
   content: ' ';
   display: inline-block;

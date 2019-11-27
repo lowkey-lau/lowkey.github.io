@@ -3,20 +3,46 @@
   
     
     <entry>
-      <title><![CDATA[使用Uniapp遇见的坑 -- 5]]></title>
-      <url>/2019/11/27/posts-10/</url>
+      <title><![CDATA[分享我的猫猫]]></title>
+      <url>/2019/11/27/%E5%88%86%E4%BA%AB%E6%88%91%E7%9A%84%E7%8C%AB%E7%8C%AB/</url>
+      <content type="html"><![CDATA[<p>哈哈哈哈，最近没啥好说的东西，给大家分享我家猫猫的图片</p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="/images/cat/small.jpg" alt="小的时候" title="可爱猫"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="/images/cat/young.jpg" alt="长大的时候" title="猫"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="/images/cat/old.jpg" alt="现在的样子" title="废猫"></div></div><div class="group-picture-row"></div><div class="group-picture-row"></div></div></div>
+
+
+
+]]></content>
+      
+        <categories>
+            
+            <category> 杂谈 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 日志 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[使用Uniapp遇见的坑-5]]></title>
+      <url>/2019/11/27/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-5/</url>
       <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
 <blockquote>
 <p>在使用Uniapp开发网站时，会出现图片 ‘闪一下’ 的白色闪动效果。</p>
 </blockquote>
 <a id="more"></a>
 
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><em>如上所说</em> （博主是使用了 <code>mode=&quot;widthFix&quot;</code> 的），官方也表明了可能是图片或者文件过大 （我测试的时候图片10KB左右）</p>
-<h2 id="解决方法（仅供参考）"><a href="#解决方法（仅供参考）" class="headerlink" title="解决方法（仅供参考）"></a>解决方法（仅供参考）</h2><p>官方也针对这个问题进行了修复：设置 <code>image{will-change: transform}</code><br><a href="https://uniapp.dcloud.io/component/image?id=image" target="_blank" rel="noopener">链接在此</a></p>
-<p>可是博主发现并不太能解决我的问题。</p>
-<p>于是我自己动手了一下，发现每次进入的时候图片会有个固定的高度，再依据 <code>mode</code> 的属性来更改图片的配置。<br>这就好办了，我在APP.vue里面设置全局 <code>image</code> 属性为 <code>height: 0</code>， 发现这个问题就这样解决，不过是针对 <code>mode=&quot;widthFix&quot;</code>的。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><em>如上所说</em> </p>
+<p>（我是设置了image为 <code>mode=&quot;widthFix&quot;</code>），官方解释是 <strong>页面结构复杂，css样式太多的情况，使用 image 可能导致样式生效较慢</strong> （我测试的时候图片10KB左右）</p>
+<h2 id="解决方法（仅供参考）"><a href="#解决方法（仅供参考）" class="headerlink" title="解决方法（仅供参考）"></a>解决方法（仅供参考）</h2><p>官方也针对这个问题进行了修复：设置 <code>image{will-change: transform}</code> 可优化此问题。<br><a href="https://uniapp.dcloud.io/component/image?id=image" target="_blank" rel="noopener">链接在此</a></p>
+<p>可是我发现这个设置不太能解决我所遇到的问题。</p>
+<p>于是自己摸索了一下，发现每次进入的时候图片会有个固定的高度，再依据 <code>mode</code> 的属性来更改图片的配置。<br>这就好办了，我在APP.vue里面设置全局 <code>image</code> 属性为 <code>height: 0</code>， 发现这个问题就这样被解决了。</p>
 <blockquote>
-<p>我不太知道以后会不会衍生出奇怪的问题出来，但程序不就是这样吗，一个愿打一个愿挨，这样才能进步呀!</p>
+<p>我不知道以后会不会衍生出奇怪的问题出来，但程序世界里不就是这样吗，只有不断探索，才能发现未知呀!</p>
 </blockquote>
 <hr>
 <blockquote>
@@ -48,8 +74,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[使用Uniapp遇见的坑 -- 4]]></title>
-      <url>/2019/09/27/posts-9/</url>
+      <title><![CDATA[使用Uniapp遇见的坑-4]]></title>
+      <url>/2019/09/27/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-4/</url>
       <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
 <blockquote>
 <p>uni-app中使用父子组件,子组件中的 <em>onLoad</em> , <em>onShow</em> 方法不执行</p>
@@ -89,8 +115,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[使用Uniapp遇见的坑 -- 3]]></title>
-      <url>/2019/09/19/posts-8/</url>
+      <title><![CDATA[使用Uniapp遇见的坑-3]]></title>
+      <url>/2019/09/19/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-3/</url>
       <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
 <blockquote>
 <p>在使用方法 <code>uni.getStorageSync</code> 在 <strong><em>H5</em></strong> 页面报<br><code>SyntaxError: Unexpected token Z in JSON at position 1</code> 的错误</p>
@@ -131,8 +157,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[使用Uniapp遇见的坑 -- 2]]></title>
-      <url>/2019/09/17/posts-7/</url>
+      <title><![CDATA[使用Uniapp遇见的坑-2]]></title>
+      <url>/2019/09/17/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-2/</url>
       <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
 <blockquote>
 <p>在使用类名为 <code>header</code> 时样式不能读取</p>
@@ -174,7 +200,7 @@
     
     <entry>
       <title><![CDATA[祝大家2019年中秋节快乐]]></title>
-      <url>/2019/09/12/posts-6/</url>
+      <url>/2019/09/12/%E7%A5%9D%E5%A4%A7%E5%AE%B62019%E5%B9%B4%E4%B8%AD%E7%A7%8B%E8%8A%82%E5%BF%AB%E4%B9%90/</url>
       <content type="html"><![CDATA[<p><code>在这里祝大家中秋节快乐</code></p>
 ]]></content>
       
@@ -194,8 +220,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[代码规范之 -- BEM]]></title>
-      <url>/2019/09/05/posts-5/</url>
+      <title><![CDATA[代码规范之-BEM]]></title>
+      <url>/2019/09/05/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E4%B9%8B-BEM/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>在某公司的熏陶下，我对代码这一块看的比较重。好的书写规范便于日常的修改及维护，也便于后人的加入。</p>
 </blockquote>
@@ -267,7 +293,7 @@
     
     <entry>
       <title><![CDATA[Hexo 的 NextT 主题（Mist）设置图片居中]]></title>
-      <url>/2019/08/29/posts-4/</url>
+      <url>/2019/08/29/Hexo%20%E7%9A%84%20NextT%20%E4%B8%BB%E9%A2%98%EF%BC%88Mist%EF%BC%89%E8%AE%BE%E7%BD%AE%E5%9B%BE%E7%89%87%E5%B1%85%E4%B8%AD/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>最近在编写博文时，使用这个主题发现插入图片默认是靠右显示的，插入小图片的时候布局非常不美观，因此在这里做一个小小的修改</p>
 </blockquote>
@@ -298,17 +324,17 @@
         
         <tags>
             
-            <tag> 前端 </tag>
-            
             <tag> Markdown </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[使用Uniapp遇见的坑 -- 1]]></title>
-      <url>/2019/08/29/posts-3/</url>
+      <title><![CDATA[使用Uniapp遇见的坑-1]]></title>
+      <url>/2019/08/29/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-1/</url>
       <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
 <blockquote>
 <p>如果一个元素根据body定位，在手机端会出现定位不准的问题</p>
@@ -352,7 +378,7 @@
     
     <entry>
       <title><![CDATA[Markdown 写法记录]]></title>
-      <url>/2019/08/28/posts-2/</url>
+      <url>/2019/08/28/Markdown%20%E5%86%99%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>因为现在开始记录博客了，而写博客使用Markdown的写法，所以想要在这里记录一下Markdown的写法，以作参考使用</p>
 </blockquote>
@@ -442,7 +468,7 @@
 </tr>
 </tbody></table>
 <hr>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><h3 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">`这是单行代码`</span></span><br></pre></td></tr></table></figure>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><h3 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h3><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">`这是单行代码`</span><br></pre></td></tr></table></figure>
 
 <p>显示效果为:<br><code>这是单行代码</code></p>
 <br>
@@ -522,7 +548,7 @@
 <hr>
 <h2 id="邮箱链接"><a href="#邮箱链接" class="headerlink" title="邮箱链接"></a>邮箱链接</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">xxx</span>@<span class="keyword">outlook</span>.<span class="keyword">com</span>&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>演示</strong><br><a href="mailto:&#x78;&#x78;&#x78;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#x78;&#x78;&#x78;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
+<p><strong>演示</strong><br><a href="mailto:&#120;&#120;&#120;&#64;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#120;&#120;&#120;&#64;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="params">|    a    |</span>       b       <span class="params">|      c     |</span></span><br><span class="line"><span class="params">|:-------:|</span><span class="symbol">:-------------</span> <span class="params">| ----------:|</span></span><br><span class="line"><span class="params">|   居中  |</span>     左对齐    <span class="params">|   右对齐   |</span></span><br><span class="line"><span class="params">|   1  |</span>     <span class="number">1</span>    <span class="params">|   1   |</span></span><br><span class="line"><span class="params">|   2  |</span>     <span class="number">2</span>    <span class="params">|   2   |</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>演示</strong></p>
@@ -574,7 +600,7 @@
     
     <entry>
       <title><![CDATA[从这个博客站当我的新起点吧]]></title>
-      <url>/2019/08/27/posts-1/</url>
+      <url>/2019/08/27/%E4%BB%8E%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E7%AB%99%E5%BD%93%E6%88%91%E7%9A%84%E6%96%B0%E8%B5%B7%E7%82%B9%E5%90%A7/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>忙活了许多时间，终于把博客给搭建起来了。从此刻开始记录我的所思、所得、所想</p>
 </blockquote>

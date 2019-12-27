@@ -3,6 +3,25 @@
   
     
     <entry>
+      <title><![CDATA[JAVA 从零开始]]></title>
+      <url>/2019/12/18/JAVA-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B/</url>
+      <content type="html"><![CDATA[<h1 id="自学ing"><a href="#自学ing" class="headerlink" title="自学ing"></a>自学ing</h1><p><code>参考资料</code><br><a href="https://www.runoob.com/java/java-basic-syntax.html" target="_blank" rel="noopener">菜鸟教程</a><br><a href="https://www.liaoxuefeng.com/wiki/1252599548343744" target="_blank" rel="noopener">廖雪峰老师的JAVA学习资料</a></p>
+<a id="more"></a>
+
+<hr>
+<h3 id="编写-Java-程序时，应注意以下几点："><a href="#编写-Java-程序时，应注意以下几点：" class="headerlink" title="编写 Java 程序时，应注意以下几点："></a>编写 Java 程序时，应注意以下几点：</h3><p><strong>大小写敏感：</strong>Java 是大小写敏感的，这就意味着标识符 Hello 与 hello 是不同的。<br><strong>类名：</strong>对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如 MyFirstJavaClass 。<br><strong>方法名：</strong>所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写。<br><strong>源文件名：</strong>源文件名必须和类名相同。当保存文件的时候，你应该使用类名作为文件名保存（切记 Java 是大小写敏感的），文件名的后缀为 .java。（如果文件名和类名不相同则会导致编译错误）。<br><strong>主方法入口：</strong>所有的 Java 程序由 public static void main(String []args) 方法开始执行。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> JAVA </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[记录个人使用SCSS的小知识]]></title>
       <url>/2019/12/06/%E8%AE%B0%E5%BD%95%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8SCSS%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -359,9 +378,9 @@
         
         <tags>
             
-            <tag> 前端 </tag>
-            
             <tag> Markdown </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
         
@@ -569,7 +588,7 @@
 
 <p><strong>演示</strong><br><a href="http://www.baidu.com" target="_blank" rel="noopener"><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="我是图片备注" title="我是图片备注"></a></p>
 <hr>
-<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">-</span> <span class="selector-attr">[x]</span> 选项一</span><br><span class="line"><span class="selector-tag">-</span> <span class="selector-attr">[ ]</span> 选项二  </span><br><span class="line"><span class="selector-tag">-</span> <span class="selector-attr">[ ]</span>  <span class="selector-attr">[选项3]</span></span><br></pre></td></tr></table></figure>
+<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><figure class="highlight accesslog"><table><tr><td class="code"><pre><span class="line">- <span class="string">[x]</span> 选项一</span><br><span class="line">- <span class="string">[ ]</span> 选项二  </span><br><span class="line">- <span class="string">[ ]</span>  <span class="string">[选项3]</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>演示</strong></p>
 <ul>
@@ -583,7 +602,7 @@
 <hr>
 <h2 id="邮箱链接"><a href="#邮箱链接" class="headerlink" title="邮箱链接"></a>邮箱链接</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">xxx</span>@<span class="keyword">outlook</span>.<span class="keyword">com</span>&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>演示</strong><br><a href="mailto:&#120;&#120;&#120;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#x2e;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#120;&#120;&#120;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#x2e;&#99;&#x6f;&#109;</a></p>
+<p><strong>演示</strong><br><a href="mailto:&#120;&#120;&#x78;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;" target="_blank" rel="noopener">&#120;&#120;&#x78;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="params">|    a    |</span>       b       <span class="params">|      c     |</span></span><br><span class="line"><span class="params">|:-------:|</span><span class="symbol">:-------------</span> <span class="params">| ----------:|</span></span><br><span class="line"><span class="params">|   居中  |</span>     左对齐    <span class="params">|   右对齐   |</span></span><br><span class="line"><span class="params">|   1  |</span>     <span class="number">1</span>    <span class="params">|   1   |</span></span><br><span class="line"><span class="params">|   2  |</span>     <span class="number">2</span>    <span class="params">|   2   |</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>演示</strong></p>

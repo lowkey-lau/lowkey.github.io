@@ -3,8 +3,121 @@
   
     
     <entry>
-      <title><![CDATA[Next主题下图片的栅格化系统]]></title>
-      <url>/2020/04/07/%E5%88%86%E4%BA%AB%E6%88%91%E7%9A%84%E7%8C%AB%E7%8C%AB/</url>
+      <title><![CDATA[使用uni-app遇见的坑-7]]></title>
+      <url>/2020/11/07/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-7/</url>
+      <content type="html"><![CDATA[<p>在使用 uni-app 开发 webApp 的时候，总会遇见或多或小的坑</p>
+<blockquote>
+<p>之前遇到一个需求，希望背景是视频的，能自动循环播放且能有声音。这时问题来了，在uni-app中视频的层级高于其他前端组件。</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<p>关于<code>视频</code>这一块，官网也有一个非常详细的描述，看官且看<br><a href="https://uniapp.dcloud.io/component/video?id=video" title="uni-app - 视频" target="_blank" rel="noopener">uni-app - 视频</a></p>
+<p>如果使用正常的布局会发现你编写的组件被视频给覆盖了，这里我使用了两种解决方式：</p>
+<h3 id="1-使用cover-view"><a href="#1-使用cover-view" class="headerlink" title="1.使用cover-view"></a>1.使用cover-view</h3><p>当你的页面元素不需要很复杂且元素不多的时候，可以使用 <code>cover-view</code><br><a href="https://uniapp.dcloud.io/component/cover-view" title="uni-app - cover-view" target="_blank" rel="noopener">uni-app - cover-view</a></p>
+<p>在 <code>video</code> 元素里嵌套使用，不过缺点是只能简单的支持 <code>cover-view</code> 和 <code>cover-image</code>，事件也仅支持 <code>@click</code> 的触发</p>
+<h3 id="2-使用subNvue"><a href="#2-使用subNvue" class="headerlink" title="2.使用subNvue"></a>2.使用subNvue</h3><p>我是使用这个方法来实现了我的需求，它相当于一个编写一个原生子窗体覆盖在页面上，层级比视频的高<br><a href="https://uniapp.dcloud.io/collocation/frame/subNVues" title="uni-app - subNvue" target="_blank" rel="noopener">uni-app - subNvue</a></p>
+<p>我的使用方法是在视频页同文件夹中添加一个nvue的文件，例如：<br><img src="/images/subNvue/img-01.png" alt><br>配置完后去 <code>pages.json</code> 把subNvue文件挂载上去通过app预览效果<br><img src="/images/subNvue/img-02.png" alt> </p>
+<p>这样就完成了我们想要的效果啦，当然，它是有缺点的，<code>subNvue</code> 的写法在 <code>H5</code> 是呈现不出效果的，还有 <code>subNvue</code> 是使用 <code>Weex</code> 的编写手法，样式上有一些局限，具体的各位自行优化把<br><a href="https://weex.apache.org/zh/docs/styles/common-styles.html" title="Weex" target="_blank" rel="noopener">Weex</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> webApp </tag>
+            
+            <tag> uni-app </tag>
+            
+            <tag> subNvue </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo 使用 categories 进行多种分类]]></title>
+      <url>/2020/11/07/Hexo%20%E4%BD%BF%E7%94%A8%20categories%20%E8%BF%9B%E8%A1%8C%E5%A4%9A%E7%A7%8D%E5%88%86%E7%B1%BB/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>我希望写的一篇文章能够同时属于多个分类，例如我现在的这篇文章，想把它放在 <code>博客</code> 和 <code>干货</code> 的类别中。</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<p>一开始我使用的写法是</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">博客</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">干货</span></span><br></pre></td></tr></table></figure>
+
+<p>以及</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">categories:</span> <span class="string">[博客,干货]</span></span><br></pre></td></tr></table></figure>
+
+<p>可是这样的写法会编译成 <code>博客/干货</code> 的类别中，不是我想要的效果，我的想法是想要分离成单独的一个类别，然后去看了一下官方的文档，发现了我上面的写法属于 <code>子分类</code>，还有一个 <code>多分类</code> 的写法，书写方式也很简单</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">[博客]</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">[干货]</span></span><br></pre></td></tr></table></figure>
+
+<p>效果就这么实现了，另外这个也可以进行 <code>多分类</code> ， <code>子分类</code> 联合使用</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">  -</span><span class="string">[博客,Vue]</span></span><br><span class="line"><span class="bullet">  -</span><span class="string">[干货]</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> 博客 </category>
+            
+            <category> 干货 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[使用uni-app遇见的坑-6]]></title>
+      <url>/2020/11/06/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-6/</url>
+      <content type="html"><![CDATA[<p>在使用 uni-app 开发 webApp 的时候，总会遇见或多或小的坑</p>
+<blockquote>
+<p>当主题风格是深色，进行页面切换时会出现白屏闪动的情况，这对用户的体验是不友好的。</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p><em>如上所说</em> </p>
+<p>剖析了uni-app的渲染方式，发现他的页面都有个默认的背景颜色生成，这时解决方法就出现了</p>
+<h2 id="解决方法（仅供参考）"><a href="#解决方法（仅供参考）" class="headerlink" title="解决方法（仅供参考）"></a>解决方法（仅供参考）</h2><p>找到 <code>pages.json</code> 文件，在主题色的页面结构中添加代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;style&quot;: &#123;</span><br><span class="line">	&quot;app-plus&quot;: &#123;</span><br><span class="line">		&quot;background&quot;: 主题色</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>是不是发现这个体验感就好了很多了，当然，如果你全部页面都是同样风格的，可以在 <code>globalStyle</code> 中添加全局背景色优化</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;globalStyle&quot;: &#123;</span><br><span class="line">	&quot;app-plus&quot;: &#123;</span><br><span class="line">		&quot;background&quot;: 主题色</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果文中有什么不足或者不准确的地方，请各位大佬提出来，一起进步，谢谢！</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> webApp </tag>
+            
+            <tag> uni-app </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Next 主题下图片的栅格化系统]]></title>
+      <url>/2020/04/07/Next%20%E4%B8%BB%E9%A2%98%E4%B8%8B%E5%9B%BE%E7%89%87%E7%9A%84%E6%A0%85%E6%A0%BC%E5%8C%96%E7%B3%BB%E7%BB%9F/</url>
       <content type="html"><![CDATA[<p>今天学习了Next主题下的图片栅格布局系统，使用<code>{\% gp x-x \%}</code>,<code>{\% endgp \%}</code>设置图片展示效果，<code>x-x</code>部分可以参考<code>theme/next/scripts/tags/group-pictures.js</code>的注释来填写。</p>
 <p>分享下我家猫猫的美照。</p>
 <div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="/images/cat/small.jpg" alt="小的时候" title="可爱猫"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="/images/cat/young.jpg" alt="长大的时候" title="帅气猫"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="/images/cat/old.jpg" alt="现在的样子" title="大肥猫"></div></div><div class="group-picture-row"></div><div class="group-picture-row"></div></div></div>
@@ -15,6 +128,8 @@
       
         <categories>
             
+            <category> 博客 </category>
+            
             <category> 干货 </category>
             
         </categories>
@@ -22,17 +137,15 @@
         
         <tags>
             
-            <tag> hexo </tag>
-            
-            <tag> next主题 </tag>
+            <tag> Markdown </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[JAVA 从零开始]]></title>
-      <url>/2019/12/18/JAVA-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B/</url>
+      <title><![CDATA[Java 从零开始]]></title>
+      <url>/2019/12/18/Java%20%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B/</url>
       <content type="html"><![CDATA[<h1 id="自学ing"><a href="#自学ing" class="headerlink" title="自学ing"></a>自学ing</h1><p><code>参考资料</code><br><a href="https://www.runoob.com/java/java-basic-syntax.html" target="_blank" rel="noopener">菜鸟教程</a><br><a href="https://www.liaoxuefeng.com/wiki/1252599548343744" target="_blank" rel="noopener">廖雪峰老师的JAVA学习资料</a></p>
 <a id="more"></a>
 
@@ -40,10 +153,16 @@
 <h3 id="编写-Java-程序时，应注意以下几点："><a href="#编写-Java-程序时，应注意以下几点：" class="headerlink" title="编写 Java 程序时，应注意以下几点："></a>编写 Java 程序时，应注意以下几点：</h3><p><strong>大小写敏感：</strong>Java 是大小写敏感的，这就意味着标识符 Hello 与 hello 是不同的。<br><strong>类名：</strong>对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如 MyFirstJavaClass 。<br><strong>方法名：</strong>所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写。<br><strong>源文件名：</strong>源文件名必须和类名相同。当保存文件的时候，你应该使用类名作为文件名保存（切记 Java 是大小写敏感的），文件名的后缀为 .java。（如果文件名和类名不相同则会导致编译错误）。<br><strong>主方法入口：</strong>所有的 Java 程序由 public static void main(String []args) 方法开始执行。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 日志 </category>
+            
+        </categories>
+        
         
         <tags>
             
-            <tag> JAVA </tag>
+            <tag> Java </tag>
             
         </tags>
         
@@ -69,14 +188,12 @@
       
         <categories>
             
-            <category> 干货 </category>
+            <category> 前端 </category>
             
         </categories>
         
         
         <tags>
-            
-            <tag> 前端 </tag>
             
             <tag> css </tag>
             
@@ -85,11 +202,11 @@
     </entry>
     
     <entry>
-      <title><![CDATA[使用Uniapp遇见的坑-5]]></title>
+      <title><![CDATA[使用uni-app遇见的坑-5]]></title>
       <url>/2019/11/27/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-5/</url>
-      <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
+      <content type="html"><![CDATA[<p>在使用 uni-app 开发 webApp 的时候，总会遇见或多或小的坑</p>
 <blockquote>
-<p>在使用Uniapp开发网站时，会出现图片 ‘闪一下’ 的白色闪动效果。</p>
+<p>在使用 uni-app 开发网站时，会出现图片 ‘闪一下’ 的白色闪动效果。</p>
 </blockquote>
 <a id="more"></a>
 
@@ -111,29 +228,23 @@
             
             <category> 前端 </category>
             
-            <category> webApp </category>
-            
         </categories>
         
         
         <tags>
             
-            <tag> 前端 </tag>
-            
-            <tag> uniApp </tag>
-            
-            <tag> 技术 </tag>
-            
             <tag> webApp </tag>
+            
+            <tag> uni-app </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[使用Uniapp遇见的坑-4]]></title>
+      <title><![CDATA[使用uni-app遇见的坑-4]]></title>
       <url>/2019/09/27/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-4/</url>
-      <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
+      <content type="html"><![CDATA[<p>在使用 uni-app 开发 webApp 的时候，总会遇见或多或小的坑</p>
 <blockquote>
 <p>uni-app中使用父子组件,子组件中的 <em>onLoad</em> , <em>onShow</em> 方法不执行</p>
 </blockquote>
@@ -152,29 +263,23 @@
             
             <category> 前端 </category>
             
-            <category> webApp </category>
-            
         </categories>
         
         
         <tags>
             
-            <tag> 前端 </tag>
-            
-            <tag> uniApp </tag>
-            
-            <tag> 技术 </tag>
-            
             <tag> webApp </tag>
+            
+            <tag> uni-app </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[使用Uniapp遇见的坑-3]]></title>
+      <title><![CDATA[使用uni-app遇见的坑-3]]></title>
       <url>/2019/09/19/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-3/</url>
-      <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
+      <content type="html"><![CDATA[<p>在使用 uni-app 开发 webApp 的时候，总会遇见或多或小的坑</p>
 <blockquote>
 <p>在使用方法 <code>uni.getStorageSync</code> 在 <strong><em>H5</em></strong> 页面报<br><code>SyntaxError: Unexpected token Z in JSON at position 1</code> 的错误</p>
 </blockquote>
@@ -194,29 +299,23 @@
             
             <category> 前端 </category>
             
-            <category> webApp </category>
-            
         </categories>
         
         
         <tags>
             
-            <tag> 前端 </tag>
-            
-            <tag> uniApp </tag>
-            
-            <tag> 技术 </tag>
-            
             <tag> webApp </tag>
+            
+            <tag> uni-app </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[使用Uniapp遇见的坑-2]]></title>
+      <title><![CDATA[使用uni-app遇见的坑-2]]></title>
       <url>/2019/09/17/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-2/</url>
-      <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
+      <content type="html"><![CDATA[<p>在使用 uni-app 开发 webApp 的时候，总会遇见或多或小的坑</p>
 <blockquote>
 <p>在使用类名为 <code>header</code> 时样式不能读取</p>
 </blockquote>
@@ -236,41 +335,14 @@
             
             <category> 前端 </category>
             
-            <category> webApp </category>
-            
         </categories>
         
         
         <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> uniApp </tag>
-            
-            <tag> 技术 </tag>
             
             <tag> webApp </tag>
             
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[祝大家2019年中秋节快乐]]></title>
-      <url>/2019/09/12/%E7%A5%9D%E5%A4%A7%E5%AE%B62019%E5%B9%B4%E4%B8%AD%E7%A7%8B%E8%8A%82%E5%BF%AB%E4%B9%90/</url>
-      <content type="html"><![CDATA[<p><code>在这里祝大家中秋节快乐</code></p>
-]]></content>
-      
-        <categories>
-            
-            <category> 杂谈 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 日志 </tag>
+            <tag> uni-app </tag>
             
         </tags>
         
@@ -280,12 +352,12 @@
       <title><![CDATA[Markdown 写法记录]]></title>
       <url>/2019/09/06/Markdown%20%E5%86%99%E6%B3%95%E8%AE%B0%E5%BD%95/</url>
       <content type="html"><![CDATA[<blockquote>
-<p>因为现在开始记录博客了，而写博客使用Markdown的写法，所以想要在这里记录一下Markdown的写法，以作参考使用</p>
+<p>开始记录博客了，可Hexo编写的文章使用Markdown的写法，因此在这里记录一下Markdown的写法</p>
 </blockquote>
 <a id="more"></a>
 
 <hr>
-<h2 id="Markdown-的创始人"><a href="#Markdown-的创始人" class="headerlink" title="Markdown 的创始人"></a>Markdown 的创始人</h2><p><img src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=cc1dd4108a13632711edc531a18da056/c8ea15ce36d3d5396bc2470f3a87e950342ab07b.jpg" alt="Aaron Swartz 大神照片" title="Aaron Swartz 大神照片"></p>
+<h2 id="Markdown-的创始人"><a href="#Markdown-的创始人" class="headerlink" title="Markdown 的创始人"></a>Markdown 的创始人</h2><p><img src="/images/people/Aaron_Swartz.jpg" alt="Aaron Swartz 大神照片" title="Aaron Swartz 大神照片"></p>
 <!-- > Aaron Swartz 大神照片 -->
 <hr>
 <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>标题共有六个级别,使用 <code>#</code> 来区分层级</p>
@@ -368,7 +440,7 @@
 </tr>
 </tbody></table>
 <hr>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><h3 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h3><figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">`这是单行代码`</span><br></pre></td></tr></table></figure>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><h3 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">`这是单行代码`</span><br></pre></td></tr></table></figure>
 
 <p>显示效果为:<br><code>这是单行代码</code></p>
 <br>
@@ -417,7 +489,7 @@
 </ol>
 <hr>
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>常用链接方法</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">文字链接 [<span class="string">链接名称</span>](<span class="link">http://链接网址</span>)</span><br><span class="line">网址链接 <span class="xml"><span class="tag">&lt;<span class="name">http:</span>//链接网址&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">文字链接 [<span class="string">链接名称</span>](<span class="link">http://链接网址</span>)</span><br><span class="line">网址链接 &lt;http://链接网址&gt;</span><br></pre></td></tr></table></figure>
 
 <p>高级链接技巧</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">这个链接用 1 作为网址变量 [<span class="string">Google</span>][<span class="symbol">1</span>].</span><br><span class="line">这个链接用 yahoo 作为网址变量 [<span class="string">Yahoo!</span>][<span class="symbol">yahoo</span>].</span><br><span class="line">然后在文档的结尾为变量赋值（网址）</span><br><span class="line">[<span class="symbol">1</span>]: <span class="link">http://www.google.com/</span></span><br><span class="line">[<span class="symbol">yahoo</span>]: <span class="link">http://www.yahoo.com/</span></span><br></pre></td></tr></table></figure>
@@ -426,15 +498,15 @@
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><blockquote>
 <p>插入图片不需要其他按钮，你只需要使用 <strong>![](图片链接地址)</strong> 这样的语法即可</p>
 </blockquote>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">我是图片备注</span>](<span class="link">http://zh.mweb.im/asset/img/set-up-git.gif</span>)</span><br><span class="line"></span><br><span class="line">另外发现Hexo的Next主题需要: </span><br><span class="line"> </span><br><span class="line">![<span class="string">我是图片备注</span>](<span class="link">http://zh.mweb.im/asset/img/set-up-git.gif "我是图片备注"</span>) </span><br><span class="line"></span><br><span class="line">这种写法才能显示</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![我是图片备注](http://zh.mweb.im/asset/img/set-up-git.gif)</span><br><span class="line"></span><br><span class="line">另外发现Hexo的Next主题需要: </span><br><span class="line"> </span><br><span class="line">![我是图片备注](http://zh.mweb.im/asset/img/set-up-git.gif &quot;我是图片备注&quot;) </span><br><span class="line"></span><br><span class="line">这种写法才能显示</span><br></pre></td></tr></table></figure>
 
 <p><strong>演示</strong><br><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="我是图片备注" title="我是图片备注"></p>
 <hr>
-<h2 id="图片链接"><a href="#图片链接" class="headerlink" title="图片链接"></a>图片链接</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">![我是图片备注</span>](<span class="link">http://zh.mweb.im/asset/img/set-up-git.gif "我是图片备注"</span>)](<span class="link">http://www.baidu.com</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="图片链接"><a href="#图片链接" class="headerlink" title="图片链接"></a>图片链接</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[![我是图片备注](http://zh.mweb.im/asset/img/set-up-git.gif &quot;我是图片备注&quot;)](http://www.baidu.com)</span><br></pre></td></tr></table></figure>
 
 <p><strong>演示</strong><br><a href="http://www.baidu.com" target="_blank" rel="noopener"><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="我是图片备注" title="我是图片备注"></a></p>
 <hr>
-<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><figure class="highlight accesslog"><table><tr><td class="code"><pre><span class="line">- <span class="string">[x]</span> 选项一</span><br><span class="line">- <span class="string">[ ]</span> 选项二  </span><br><span class="line">- <span class="string">[ ]</span>  <span class="string">[选项3]</span></span><br></pre></td></tr></table></figure>
+<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- [x] 选项一</span><br><span class="line">- [ ] 选项二  </span><br><span class="line">- [ ]  [选项3]</span><br></pre></td></tr></table></figure>
 
 <p><strong>演示</strong></p>
 <ul>
@@ -446,10 +518,10 @@
 <h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>分割线的使用方式很简单，使用 <code>---</code> 即可生成一条分割线</p>
 <p><strong>演示</strong></p>
 <hr>
-<h2 id="邮箱链接"><a href="#邮箱链接" class="headerlink" title="邮箱链接"></a>邮箱链接</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">xxx</span>@<span class="keyword">outlook</span>.<span class="keyword">com</span>&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="邮箱链接"><a href="#邮箱链接" class="headerlink" title="邮箱链接"></a>邮箱链接</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;xxx@outlook.com&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>演示</strong><br><a href="mailto:&#x78;&#120;&#120;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x78;&#120;&#120;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="params">|    a    |</span>       b       <span class="params">|      c     |</span></span><br><span class="line"><span class="params">|:-------:|</span><span class="symbol">:-------------</span> <span class="params">| ----------:|</span></span><br><span class="line"><span class="params">|   居中  |</span>     左对齐    <span class="params">|   右对齐   |</span></span><br><span class="line"><span class="params">|   1  |</span>     <span class="number">1</span>    <span class="params">|   1   |</span></span><br><span class="line"><span class="params">|   2  |</span>     <span class="number">2</span>    <span class="params">|   2   |</span></span><br></pre></td></tr></table></figure>
+<p><strong>演示</strong><br><a href="mailto:&#x78;&#x78;&#x78;&#64;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#x78;&#x78;&#x78;&#64;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;</a></p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">|    a    |       b       |      c     |</span><br><span class="line">|:-------:|:------------- | ----------:|</span><br><span class="line">|   居中  |     左对齐    |   右对齐   |</span><br><span class="line">|   1  |     1    |   1   |</span><br><span class="line">|   2  |     2    |   2   |</span><br></pre></td></tr></table></figure>
 
 <p><strong>演示</strong></p>
 <table>
@@ -485,6 +557,8 @@
       
         <categories>
             
+            <category> 博客 </category>
+            
             <category> 干货 </category>
             
         </categories>
@@ -492,15 +566,15 @@
         
         <tags>
             
-            <tag> 日记 </tag>
+            <tag> Markdown </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[代码规范之-BEM]]></title>
-      <url>/2019/09/05/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E4%B9%8B-BEM/</url>
+      <title><![CDATA[代码规范之 - BEM]]></title>
+      <url>/2019/09/05/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E4%B9%8B%20-%20BEM/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>在某公司的熏陶下，我对代码这一块看的比较重。好的书写规范便于日常的修改及维护，也便于后人的加入。</p>
 </blockquote>
@@ -557,12 +631,12 @@
             
             <category> 干货 </category>
             
+            <category> 前端 </category>
+            
         </categories>
         
         
         <tags>
-            
-            <tag> 前端 </tag>
             
             <tag> css </tag>
             
@@ -581,20 +655,22 @@
 <p>首先去了解了Hexo渲染的机制，发现是由主题控制的，因此找呀找，找到 <code>themes/next/source/css/_schemes/Mist/_posts-expanded.styl</code> 这个文件，找到 <code>.posts-expand</code> 中的 <code>.post-body img { margin-left: 0; }</code>，将之修改为 <code>.post-body img { margin: 0 auto; }</code> 即可。</p>
 <p>然后顺便一提不晓得是不是我设置了啥，发现原本应该会出现的图片标签/注释显示不出来，又去找了一波资料</p>
 <h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>找到了一个插件 <code>hexo-image-caption</code>，安装 <code>npm install --save hexo-image-caption</code> ,然后在站点设置文件末尾添加</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">image_caption:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span> <span class="comment">#false to disable</span></span><br><span class="line"><span class="attr">  class_name:</span> <span class="comment">#if you wanna customize the style for the caption,you can assign a class name, default is 'image-caption'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">image_caption:</span><br><span class="line">  enable: true #false to disable</span><br><span class="line">  class_name: #if you wanna customize the style for the caption,you can assign a class name, default is &apos;image-caption&apos;</span><br></pre></td></tr></table></figure>
 
 <h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在Next官网 issue 看到了个修复方式，不需要安装插件。<br>首先需要在主题设置文件里找到 <code>Fancybox</code> 把它设置为 <code>true</code>，然后写法使用<br><code>![备注](地址 &#39;备注&#39;)</code> 即可解决，详情可以在 <a href="https://github.com/iissnan/hexo-theme-next/issues/436" target="_blank" rel="noopener">Next - issues - 436</a> 这里查看。</p>
 <hr>
 <p>然后就出来了效果，可是这时候样式我个人是不欣赏的，我就着手修改<br>找到 <code>themes/next/source/css/_common/components/post/post.styl</code> 这个文件，找到 <code>.image-caption</code>，修改成以下样式</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.image-caption</span> &#123;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">20%</span>;</span><br><span class="line">	<span class="attribute">max-width</span>: <span class="number">80%</span>;</span><br><span class="line">	<span class="attribute">min-height</span>: <span class="number">22px</span>;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#969696</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">1.7</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.image-caption &#123;</span><br><span class="line">	min-width: 20%;</span><br><span class="line">	max-width: 80%;</span><br><span class="line">	min-height: 22px;</span><br><span class="line">	display: block;</span><br><span class="line">	padding: 10px;</span><br><span class="line">	margin: 0 auto;</span><br><span class="line">	font-size: 14px;</span><br><span class="line">	color: #969696;</span><br><span class="line">	line-height: 1.7;</span><br><span class="line">	text-align: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>如果想要个虚线的话也可以另外添加一个</p>
-<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.image-caption</span>:after&#123;</span><br><span class="line">	<span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">	<span class="attribute">width</span> 100px;</span><br><span class="line">	<span class="attribute">height</span> 1px;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">10px</span> auto;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#d9d9d9</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.image-caption:after&#123;</span><br><span class="line">	content: &apos;&apos;;</span><br><span class="line">	width 100px;</span><br><span class="line">	height 1px;</span><br><span class="line">	display: block;</span><br><span class="line">	margin: 10px auto;</span><br><span class="line">	background-color: #d9d9d9</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>效果如下：<br><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="测试图片" title="测试图片"></p>
 ]]></content>
       
         <categories>
+            
+            <category> 博客 </category>
             
             <category> 干货 </category>
             
@@ -605,16 +681,14 @@
             
             <tag> Markdown </tag>
             
-            <tag> 前端 </tag>
-            
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[使用Uniapp遇见的坑-1]]></title>
+      <title><![CDATA[使用uni-app遇见的坑-1]]></title>
       <url>/2019/08/29/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-1/</url>
-      <content type="html"><![CDATA[<p>在使用 Uniapp 开发 webAPP 的时候，总会遇见或多或小的坑</p>
+      <content type="html"><![CDATA[<p>在使用 uni-app 开发 webApp 的时候，总会遇见或多或小的坑</p>
 <blockquote>
 <p>如果一个元素根据body定位，在手机端会出现定位不准的问题</p>
 </blockquote>
@@ -636,20 +710,14 @@
             
             <category> 前端 </category>
             
-            <category> webApp </category>
-            
         </categories>
         
         
         <tags>
             
-            <tag> 前端 </tag>
-            
-            <tag> uniApp </tag>
-            
-            <tag> 技术 </tag>
-            
             <tag> webApp </tag>
+            
+            <tag> uni-app </tag>
             
         </tags>
         
@@ -683,16 +751,10 @@
       
         <categories>
             
-            <category> 杂谈 </category>
+            <category> 日志 </category>
             
         </categories>
         
-        
-        <tags>
-            
-            <tag> 日记 </tag>
-            
-        </tags>
         
     </entry>
     

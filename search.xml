@@ -3,6 +3,39 @@
   
     
     <entry>
+      <title><![CDATA[使用uni-app遇见的坑-8]]></title>
+      <url>/2020/11/16/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-8/</url>
+      <content type="html"><![CDATA[<p>在使用 uni-app 开发 webApp 的时候，总会遇见或多或小的坑</p>
+<blockquote>
+<p>在uniapp开发中使用nvue，如果使用了全局样式，就会报一大堆错误，类似这种</p>
+</blockquote>
+<p><img src="/images/subNvue/img-pack-bug.png" alt="nvue 使用全局样式引起的Bug" title="nvue使用全局样式引起的Bug"> </p>
+<a id="more"></a>
+<hr>
+<p>出现这个问题的原因是 <code>nvue</code> 使用的编写方式是 <code>week</code>，详细的可以看 <a href="https://weex.apache.org/zh/docs/styles/common-styles.html" title="Weex" target="_blank" rel="noopener">Weex</a><br>Emm，看了挺多的别人分享的东西，可是不是很好的呈现效果，然后突然想了想可不可以用平台判断呢，然后查了下官网文档发现有 <code>#ifndef APP-NVUE</code> 这个判断，那问题就这么简单的解决了哈哈</p>
+<p><img src="/images/subNvue/img-pack-bug-fixed.png" alt="Bug修复" title="Bug修复"> </p>
+]]></content>
+      
+        <categories>
+            
+            <category> 前端 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> webApp </tag>
+            
+            <tag> uni-app </tag>
+            
+            <tag> subNvue </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[使用uni-app遇见的坑-7]]></title>
       <url>/2020/11/07/%E4%BD%BF%E7%94%A8Uniapp%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91-7/</url>
       <content type="html"><![CDATA[<p>在使用 uni-app 开发 webApp 的时候，总会遇见或多或小的坑</p>
@@ -520,7 +553,7 @@
 <hr>
 <h2 id="邮箱链接"><a href="#邮箱链接" class="headerlink" title="邮箱链接"></a>邮箱链接</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;xxx@outlook.com&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>演示</strong><br><a href="mailto:&#x78;&#x78;&#x78;&#64;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#x78;&#x78;&#x78;&#64;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;</a></p>
+<p><strong>演示</strong><br><a href="mailto:&#x78;&#x78;&#x78;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x78;&#x78;&#x78;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#99;&#111;&#x6d;</a></p>
 <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">|    a    |       b       |      c     |</span><br><span class="line">|:-------:|:------------- | ----------:|</span><br><span class="line">|   居中  |     左对齐    |   右对齐   |</span><br><span class="line">|   1  |     1    |   1   |</span><br><span class="line">|   2  |     2    |   2   |</span><br></pre></td></tr></table></figure>
 
 <p><strong>演示</strong></p>

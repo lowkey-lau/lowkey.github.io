@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/* 初始化赋值 */
+/* 暂时处理 var(--status-bar-height)不生效 */
+/* 颜色 */
+/* 导航条高度 */
+/* 公用方法 */
+/* 快捷布局 */
+/* 清除末尾 */
+/* 省略号 */
+/* 动画时长 */
+/* 阴影 */
+/* 艺术标题 */
+/* 渐变 */
+/* 初始化样式 */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PingFangSC-Regular', 'AvenirBold'; }
+
+body {
+  background-color: #040408;
+  font-size: 62.5%; }
+
+/* 页面样式 */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html,
+body {
+  background-color: #f5f5f5; }
+
+.page {
+  max-width: 800px;
+  text-align: center;
+  margin: 30px auto;
+  padding: 30px 45px;
+  -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
+  background-color: #fff; }
+
+.titleBox {
+  margin-bottom: 30px; }
+  .titleBox-wrapper {
+    position: relative;
+    padding-bottom: 30px; }
+    .titleBox-wrapper:after {
+      content: '';
+      display: inline-block;
+      width: 100px;
+      height: 4px;
+      border-radius: 30px;
+      background-color: skyblue;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translate(-50%);
+              transform: translate(-50%);
+      bottom: 0; }
+  .titleBox-title {
+    font-size: 36px;
+    font-weight: bold; }
+
+.itemBox-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+.itemBox-item {
+  width: calc(25% - 30px);
+  margin: 15px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 10px 2px #CCCCCC;
+          box-shadow: 0 0 10px 2px #CCCCCC; }
+  .itemBox-item:hover .itemBox-item__hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  .itemBox-item__icon {
+    width: 100%;
+    font-size: 0; }
+    .itemBox-item__icon img {
+      width: 100%;
+      display: block; }
+  .itemBox-item__hover {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    z-index: 1;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .itemBox-item__title {
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 15px; }
+
+.border {
+  position: relative; }
+
+.border:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 2px;
+  height: 100%;
+  background: #ddd;
+  border-left: 2px solid #ddd !important; }
+
+section a {
+  color: #666;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all; }
+
+section a:hover {
+  color: #333;
+  text-decoration: underline; }
+
+/*# sourceMappingURL=style.css.map */

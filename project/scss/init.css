@@ -150,7 +150,6 @@ section a:hover {
 .popupImageBox {
   width: 100%; }
   .popupImageBox img {
-    display: block;
     width: 100%; }
 
 .el-dialog {
@@ -166,12 +165,7 @@ section a:hover {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  max-width: 1280px !important; }
-
-.el-dialog__title {
-  font-size: 24px !important;
-  font-weight: bold; }
+          transform: translate(-50%, -50%); }
 
 .el-dialog .el-dialog__body {
   -webkit-box-flex: 1;
@@ -179,4 +173,4 @@ section a:hover {
           flex: 1;
   overflow: auto; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=init.css.map */
